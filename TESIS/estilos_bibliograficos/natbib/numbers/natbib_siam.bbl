@@ -1,0 +1,46 @@
+\begin{thebibliography}{1}
+
+\bibitem{book-example}
+{\sc R.~Abraham, J.~E. Marsden, and T.~Ratiu}, {\em Manifolds, Tensor Analysis,
+  and Applications}, Springer-Verlag, New York, 2~ed., 1988.
+
+\bibitem{incollection-example}
+{\sc S.~C. Cowin}, {\em Adaptive anisotropy: An example in living bone}, in
+  Non-Classical Continuum Mechanics, vol.~122 of London Mathematical Society
+  Lecture Note Series, Cambridge University Press, 1987, pp.~174--186.
+
+\bibitem{inbook-example}
+{\sc D.~K. Edwards}, {\em Thermal Radiation Measurements}, Hemisphere
+  Publishing Corporation, New York, USA, 2~ed., 1976, ch.~10.
+
+\bibitem{techreport-exampleIn}
+{\sc D.~A. Garret}, {\em The microscopic detection of corrosion in aluminum
+  aircraft structures with thermal neutron beams and film imaging methods}, In:
+  Report NBSIR 78-1434, National Bureau of Standards, Washington, D.C., 1977.
+
+\bibitem{inproceedings-example}
+{\sc M.~E. Gurtin}, {\em On the nonlinear theory of elasticity}, in Proceedings
+  of the International Symposium on Continuum Mechanics and Partial
+  Differential Equations: Contemporary Developments in Continuum Mechanics and
+  Partial Differential Equations, Rio de Janeiro, Aug. 1977, pp.~237--253.
+
+\bibitem{article-example}
+{\sc D.~Iesan}, {\em Existence theorems in the theory of mixtures}, Journal of
+  Elasticity, 42 (1996), pp.~145--163.
+
+\bibitem{techreport-example}
+{\sc L.~Maestrello}, {\em Two-point correlations of sound pressure in the far
+  field of a jet: Experiment}, {NASA} {TM}~{X}-72835, 1976.
+
+\bibitem{phdthesis-example}
+{\sc H.~R. Paes~Junior}, {\em Influ{\^e}ncia da Espessura da Camada
+  Intr{\'i}nseca e Energia do Foton na Degrada{\c c}\~ao de C{\'e}lulas Solares
+  de Sil{\'i}cio Amorfo Hidrogenado}, tese de {D.Sc.}, COPPE/UFRJ, Rio de
+  Janeiro, RJ, Brasil, 1994.
+
+\bibitem{mastersthesis-example}
+{\sc A.~Tuntomo}, {\em Transport phenomena in a small particle with internal
+  radiant absorption}, {Ph.D.} dissertation, University of California at
+  Berkeley, Berkeley, California, USA, 1990.
+
+\end{thebibliography}

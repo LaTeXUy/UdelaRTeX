@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2014/Arch Linux)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: natbib_vancouver.aux
+The style file: vancouver.bst
+Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=8) to 20 items from 10.
+Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
+Database file #1: references.bib
+Warning--empty pages in inbook-example
+You've used 9 entries,
+            3170 wiz_defined-function locations,
+            703 strings with 6133 characters,
+and the built_in function-call counts, 6917 in all, are:
+= -- 838
+> -- 54
+< -- 5
++ -- 47
+- -- 13
+* -- 465
+:= -- 844
+add.period$ -- 31
+call.type$ -- 9
+change.case$ -- 10
+chr.to.int$ -- 6
+cite$ -- 10
+duplicate$ -- 602
+empty$ -- 652
+format.name$ -- 15
+if$ -- 1649
+int.to.chr$ -- 0
+int.to.str$ -- 9
+missing$ -- 62
+newline$ -- 47
+num.names$ -- 11
+pop$ -- 133
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 143
+stack$ -- 0
+substring$ -- 908
+swap$ -- 182
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 54
+width$ -- 10
+write$ -- 103
+(There was 1 warning)

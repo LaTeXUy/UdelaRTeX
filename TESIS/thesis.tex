@@ -1,0 +1,104 @@
+\documentclass[msc,oneside,a4paper]{udelar}
+
+\usepackage[
+acronyms, 											 %utiliza el glosario de acronimos
+nohypertypes={acronym,notacion,simbolos,glosario}, %quita los links en el texto al glosario
+%nonumberlist,                                        %quita los links en los glosarios al texto
+nogroupskip,                                         %quita los espacios entre diferentes grupos dentro de un glosario
+nopostdot,                                            %quita el punto final en los acrónimos
+]{glossaries}
+
+\hypersetup{ colorlinks = false } % false para imprimir, true para ver
+
+\usepackage{natbib} % Para algunos estilos bibliográficos
+\bibliographystyle{estilos_bibliograficos/natbib/apalike}
+
+\loadglossary
+
+
+\begin{document}
+
+
+
+  \title{Título de la Tesis}
+  \subtitle{Subtítulo de la Tesis}
+  \institutelogo
+  \author{Nombres del autor}{Apellidos del autor}
+  
+  \director{Prof.}{Nombre del Director de Tesis}{Apellido}{D.Sc.}
+  \codirector{Prof.}{Nombre del 1er Codirector}{Apellido}{D.Sc.}
+  \codirector{Prof.}{Nombre del 2do Codirector}{Apellido}{D.Sc.}
+  \codirector{Prof.}{Nombre del 3er Codirector}{Apellido}{D.Sc.}
+  \directoracademico{Prof.}{Nombre del Director Académico de Tesis}{Apellido}{D.Sc.}
+
+  \examiner{Prof.}{Nombre del 1er Examinador}{Apellido}{D.Sc.}
+  \examiner{Prof.}{Nombre del 2do Examinador}{Apellido}{Ph.D.}
+  \examiner{Prof.}{Nombre del 3er Examinador}{Apellido}{D.Sc.}
+  \examiner{Prof.}{Nombre del 4to Examinador}{Apellido}{Ph.D.}
+  \examiner{Prof.}{Nombre del 5to Examinador}{Apellido}{Ph.D.}
+  
+  \graduatename{Ingeniería Estructural}
+  \institute{Facultad de Ingeniería}{FIng}
+  \institute{Facultad de Medicina}{FMed}
+  \graduatelocation{Montevideo}{Uruguay}
+  
+  
+  \date{22}{11}{2014}
+
+  \keyword{1ra palabra clave}
+  \keyword{2da palabra clave}
+  \keyword{3ra palabra clave}
+  \keyword{4ta palabra clave}
+  \keyword{5ta~palabra clave}
+        
+  \maketitle
+  
+  \frontmatter
+  
+  \include{ded_agr_epi/dedicacion}
+  \include{ded_agr_epi/agradecimientos}
+  \include{ded_agr_epi/epigrafe}
+  \include{resumen/resumen}
+  \include{resumen/abstract}
+  
+  
+  \listoffigures
+  
+  \listoftables
+  
+  %\listadesimbolos 		 %Lista de símbolos
+  %\listadenotaciones 	     %Lista de notaciones
+  \listadesiglas 		     %Lista de siglas
+
+  \tableofcontents
+
+  \mainmatter
+  \include{capitulos/chap01}
+  \include{capitulos/chap02}
+  \include{capitulos/chap03}
+  \include{capitulos/chap04}
+  \include{capitulos/chap05}
+
+
+
+  \backmatter
+  
+  \bibliography{bibliografia}
+  \bibend
+  
+  \glosario 			%Glosario
+ 
+  
+  \apenarabicnumbering
+  \apenmatter
+  \input{apendice/apendice_A}
+  \input{apendice/apendice_B}
+  \input{apendice/apendice_C}
+  
+  \anexarabicnumbering
+  \anexmatter
+  \input{anexo/anexo_A}
+    
+  
+  
+\end{document}

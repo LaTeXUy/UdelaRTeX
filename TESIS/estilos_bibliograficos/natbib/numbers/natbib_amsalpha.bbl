@@ -1,0 +1,53 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{AMR88}
+
+\bibitem[AMR88]{book-example}
+R.~Abraham, J.~E. Marsden, and T.~Ratiu, \emph{Manifolds, tensor analysis, and
+  applications}, 2 ed., Springer-Verlag, New York, 1988.
+
+\bibitem[Cow87]{incollection-example}
+S.~C. Cowin, \emph{Adaptive anisotropy: An example in living bone},
+  Non-Classical Continuum Mechanics, London Mathematical Society Lecture Note
+  Series, vol. 122, Cambridge University Press, 1987, pp.~174--186.
+
+\bibitem[Edw76]{inbook-example}
+D.~K. Edwards, \emph{Thermal radiation measurements}, 2 ed., ch.~10, Hemisphere
+  Publishing Corporation, New York, USA, 1976.
+
+\bibitem[Gar77]{techreport-exampleIn}
+D.~A. Garret, \emph{The microscopic detection of corrosion in aluminum aircraft
+  structures with thermal neutron beams and film imaging methods}, In: Report
+  NBSIR 78-1434, National Bureau of Standards, Washington, D.C., 1977.
+
+\bibitem[Gur77]{inproceedings-example}
+M.~E. Gurtin, \emph{On the nonlinear theory of elasticity}, Proceedings of the
+  International Symposium on Continuum Mechanics and Partial Differential
+  Equations: Contemporary Developments in Continuum Mechanics and Partial
+  Differential Equations (Rio de Janeiro), August 1977, pp.~237--253.
+
+\bibitem[Ies96]{article-example}
+D.~Iesan, \emph{Existence theorems in the theory of mixtures}, Journal of
+  Elasticity \textbf{42} (1996), no.~2, 145--163.
+
+\bibitem[Mae76]{techreport-example}
+L.~Maestrello, \emph{Two-point correlations of sound pressure in the far field
+  of a jet: Experiment}, {NASA} {TM}~{X}-72835, 1976.
+
+\bibitem[PJ94]{phdthesis-example}
+H.~R. Paes~Junior, \emph{Influ{\^e}ncia da espessura da camada intr{\'i}nseca e
+  energia do foton na degrada{\c c}\~ao de c{\'e}lulas solares de sil{\'i}cio
+  amorfo hidrogenado}, Tese de {D.Sc.}, COPPE/UFRJ, Rio de Janeiro, RJ, Brasil,
+  1994.
+
+\bibitem[Tun90]{mastersthesis-example}
+A.~Tuntomo, \emph{Transport phenomena in a small particle with internal radiant
+  absorption}, {Ph.D.} dissertation, University of California at Berkeley,
+  Berkeley, California, USA, 1990.
+
+\end{thebibliography}

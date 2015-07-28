@@ -1,0 +1,60 @@
+\begin{thebibliography}{1}
+
+\bibitem{book-example}
+{\sc Abraham, R., Marsden, J.~E., and Ratiu, T.}
+\newblock {\em Manifolds, Tensor Analysis, and Applications}, 2~ed.
+\newblock Springer-Verlag, New York, 1988.
+
+\bibitem{incollection-example}
+{\sc Cowin, S.~C.}
+\newblock Adaptive anisotropy: An example in living bone.
+\newblock In {\em Non-Classical Continuum Mechanics}, vol.~122 of {\em London
+  Mathematical Society Lecture Note Series}. Cambridge University Press, 1987,
+  pp.~174--186.
+
+\bibitem{inbook-example}
+{\sc Edwards, D.~K.}
+\newblock {\em Thermal Radiation Measurements}, 2~ed.
+\newblock Hemisphere Publishing Corporation, New York, USA, 1976, ch.~10.
+
+\bibitem{techreport-exampleIn}
+{\sc Garret, D.~A.}
+\newblock The microscopic detection of corrosion in aluminum aircraft
+  structures with thermal neutron beams and film imaging methods.
+\newblock In: Report NBSIR 78-1434, National Bureau of Standards, Washington,
+  D.C., 1977.
+
+\bibitem{inproceedings-example}
+{\sc Gurtin, M.~E.}
+\newblock On the nonlinear theory of elasticity.
+\newblock In {\em Proceedings of the International Symposium on Continuum
+  Mechanics and Partial Differential Equations: Contemporary Developments in
+  Continuum Mechanics and Partial Differential Equations\/} (Rio de Janeiro,
+  Aug. 1977), pp.~237--253.
+
+\bibitem{article-example}
+{\sc Iesan, D.}
+\newblock Existence theorems in the theory of mixtures.
+\newblock {\em Journal of Elasticity 42}, 2 (Feb. 1996), 145--163.
+
+\bibitem{techreport-example}
+{\sc Maestrello, L.}
+\newblock Two-point correlations of sound pressure in the far field of a jet:
+  Experiment.
+\newblock {NASA} {TM}~{X}-72835, 1976.
+
+\bibitem{phdthesis-example}
+{\sc Paes~Junior, H.~R.}
+\newblock {\em Influ{\^e}ncia da Espessura da Camada Intr{\'i}nseca e Energia
+  do Foton na Degrada{\c c}\~ao de C{\'e}lulas Solares de Sil{\'i}cio Amorfo
+  Hidrogenado}.
+\newblock Tese de {D.Sc.}, COPPE/UFRJ, Rio de Janeiro, RJ, Brasil, 1994.
+
+\bibitem{mastersthesis-example}
+{\sc Tuntomo, A.}
+\newblock Transport phenomena in a small particle with internal radiant
+  absorption.
+\newblock {Ph.D.} dissertation, University of California at Berkeley, Berkeley,
+  California, USA, 1990.
+
+\end{thebibliography}

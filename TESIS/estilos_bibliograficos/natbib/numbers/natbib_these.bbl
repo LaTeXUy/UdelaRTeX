@@ -1,0 +1,60 @@
+\begin{thebibliography}{Paes~Junior~94}
+
+\bibitem[Abraham~88]{book-example}
+R.~Abraham, J.~E. Marsden \& T.~Ratiu.
+\newblock Manifolds, tensor analysis, and applications.
+\newblock Springer-Verlag, New York, 2 edition, 1988.
+
+\bibitem[Cowin~87]{incollection-example}
+S.~C. Cowin.
+\newblock {\em Adaptive Anisotropy: An Example in Living Bone}.
+\newblock In Non-Classical Continuum Mechanics, volume 122 of {\em London
+  Mathematical Society Lecture Note Series}, pages 174--186. Cambridge
+  University Press, 1987.
+
+\bibitem[Edwards~76]{inbook-example}
+D.~K. Edwards.
+\newblock Thermal radiation measurements, chapitre~10.
+\newblock Hemisphere Publishing Corporation, New York, USA, 2 edition, 1976.
+
+\bibitem[Garret~77]{techreport-exampleIn}
+D.~A. Garret.
+\newblock {\em The Microscopic Detection of Corrosion in Aluminum Aircraft
+  Structures with Thermal Neutron Beams and Film Imaging Methods}.
+\newblock In: Report NBSIR 78-1434, National Bureau of Standards, Washington,
+  D.C., 1977.
+
+\bibitem[Gurtin~77]{inproceedings-example}
+M.~E. Gurtin.
+\newblock {\em On the nonlinear theory of elasticity}.
+\newblock In Proceedings of the International Symposium on Continuum Mechanics
+  and Partial Differential Equations: Contemporary Developments in Continuum
+  Mechanics and Partial Differential Equations, pages 237--253, Rio de Janeiro,
+  August 1977.
+
+\bibitem[Iesan~96]{article-example}
+D.~Iesan.
+\newblock {\em Existence Theorems in the Theory of Mixtures}.
+\newblock Journal of Elasticity, vol.~42, no.~2, pages 145--163, February 1996.
+
+\bibitem[Maestrello~76]{techreport-example}
+L.~Maestrello.
+\newblock {\em Two-Point Correlations of Sound Pressure in the Far Field of a
+  Jet: Experiment}.
+\newblock {NASA} {TM}~{X}-72835, 1976.
+
+\bibitem[Paes~Junior~94]{phdthesis-example}
+H.~R. Paes~Junior.
+\newblock {\em Influ{\^e}ncia da Espessura da Camada Intr{\'i}nseca e Energia
+  do Foton na Degrada{\c c}\~ao de C{\'e}lulas Solares de Sil{\'i}cio Amorfo
+  Hidrogenado}.
+\newblock Tese de {D.Sc.}, COPPE/UFRJ, Rio de Janeiro, RJ, Brasil, 1994.
+
+\bibitem[Tuntomo~90]{mastersthesis-example}
+A.~Tuntomo.
+\newblock Transport phenomena in a small particle with internal radiant
+  absorption.
+\newblock {Ph.D.} dissertation, University of California at Berkeley, Berkeley,
+  California, USA, 1990.
+
+\end{thebibliography}

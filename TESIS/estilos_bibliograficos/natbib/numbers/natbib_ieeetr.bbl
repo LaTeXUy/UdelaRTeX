@@ -1,0 +1,47 @@
+\begin{thebibliography}{1}
+
+\bibitem{book-example}
+R.~Abraham, J.~E. Marsden, and T.~Ratiu, {\em Manifolds, Tensor Analysis, and
+  Applications}.
+\newblock New York: Springer-Verlag, 2~ed., 1988.
+
+\bibitem{article-example}
+D.~Iesan, ``Existence theorems in the theory of mixtures,'' {\em Journal of
+  Elasticity}, vol.~42, pp.~145--163, Feb. 1996.
+
+\bibitem{techreport-example}
+L.~Maestrello, ``Two-point correlations of sound pressure in the far field of a
+  jet: Experiment,'' {NASA} {TM}~{X}-72835, 1976.
+
+\bibitem{techreport-exampleIn}
+D.~A. Garret, ``The microscopic detection of corrosion in aluminum aircraft
+  structures with thermal neutron beams and film imaging methods,'' In: Report
+  NBSIR 78-1434, National Bureau of Standards, Washington, D.C., 1977.
+
+\bibitem{inproceedings-example}
+M.~E. Gurtin, ``On the nonlinear theory of elasticity,'' in {\em Proceedings of
+  the International Symposium on Continuum Mechanics and Partial Differential
+  Equations: Contemporary Developments in Continuum Mechanics and Partial
+  Differential Equations}, (Rio de Janeiro), pp.~237--253, Aug. 1977.
+
+\bibitem{incollection-example}
+S.~C. Cowin, ``Adaptive anisotropy: An example in living bone,'' in {\em
+  Non-Classical Continuum Mechanics}, vol.~122 of {\em London Mathematical
+  Society Lecture Note Series}, pp.~174--186, Cambridge University Press, 1987.
+
+\bibitem{inbook-example}
+D.~K. Edwards, {\em Thermal Radiation Measurements}, ch.~10.
+\newblock New York, USA: Hemisphere Publishing Corporation, 2~ed., 1976.
+
+\bibitem{mastersthesis-example}
+A.~Tuntomo, ``Transport phenomena in a small particle with internal radiant
+  absorption,'' {Ph.D.} dissertation, University of California at Berkeley,
+  Berkeley, California, USA, 1990.
+
+\bibitem{phdthesis-example}
+H.~R. Paes~Junior, {\em Influ{\^e}ncia da Espessura da Camada Intr{\'i}nseca e
+  Energia do Foton na Degrada{\c c}\~ao de C{\'e}lulas Solares de Sil{\'i}cio
+  Amorfo Hidrogenado}.
+\newblock Tese de {D.Sc.}, COPPE/UFRJ, Rio de Janeiro, RJ, Brasil, 1994.
+
+\end{thebibliography}

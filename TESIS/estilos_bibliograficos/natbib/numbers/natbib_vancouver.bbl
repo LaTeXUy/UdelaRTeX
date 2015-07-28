@@ -1,0 +1,60 @@
+\begin{thebibliography}{1}
+
+\bibitem{book-example}
+Abraham R, Marsden JE, Ratiu T.
+\newblock Manifolds, Tensor Analysis, and Applications.
+\newblock 2nd ed. New York: Springer-Verlag; 1988.
+
+\bibitem{article-example}
+Iesan D.
+\newblock Existence Theorems in the Theory of Mixtures.
+\newblock Journal of Elasticity. 1996 Feb;42(2):145--163.
+
+\bibitem{techreport-example}
+Maestrello L.
+\newblock Two-Point Correlations of Sound Pressure in the Far Field of a Jet:
+  Experiment; 1976. {TM}~{X}-72835.
+
+\bibitem{techreport-exampleIn}
+Garret DA.
+\newblock The Microscopic Detection of Corrosion in Aluminum Aircraft
+  Structures with Thermal Neutron Beams and Film Imaging Methods.
+\newblock Washington, D.C.: National Bureau of Standards; 1977. NBSIR 78-1434.
+
+\bibitem{inproceedings-example}
+Gurtin ME.
+\newblock On the nonlinear theory of elasticity.
+\newblock In: Proceedings of the International Symposium on Continuum Mechanics
+  and Partial Differential Equations: Contemporary Developments in Continuum
+  Mechanics and Partial Differential Equations. Rio de Janeiro; 1977. p.
+  237--253.
+
+\bibitem{incollection-example}
+Cowin SC.
+\newblock Adaptive Anisotropy: An Example in Living Bone.
+\newblock In: Non-Classical Continuum Mechanics. vol. 122 of London
+  Mathematical Society Lecture Note Series. Cambridge University Press; 1987.
+  p. 174--186.
+
+\bibitem{inbook-example}
+Edwards DK.
+\newblock 10.
+\newblock In: Eckert ERG, Goldstein RJ, editors. Thermal Radiation
+  Measurements. 2nd ed. New York, USA: Hemisphere Publishing Corporation; 1976.
+  .
+
+\bibitem{mastersthesis-example}
+Tuntomo A.
+\newblock Transport Phenomena in a Small Particle with Internal Radiant
+  Absorption [{Ph.D.} dissertation].
+\newblock University of California at Berkeley. Berkeley, California, USA;
+  1990.
+
+\bibitem{phdthesis-example}
+Paes~Junior HR.
+\newblock Influ{\^e}ncia da Espessura da Camada Intr{\'i}nseca e Energia do
+  Foton na Degrada{\c c}\~ao de C{\'e}lulas Solares de Sil{\'i}cio Amorfo
+  Hidrogenado [Tese de {D.Sc.}].
+\newblock COPPE/UFRJ. Rio de Janeiro, RJ, Brasil; 1994.
+
+\end{thebibliography}

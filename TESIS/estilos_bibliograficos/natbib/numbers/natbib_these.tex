@@ -1,0 +1,42 @@
+
+\section*{natib - these}
+\bibliographystyle{these}
+{\centering
+	\begin{verbatim}
+	\usepackage[numbers]{natbib}
+	\bibliographystyle{estilos_bibliograficos/natbib/numbers/these}
+	\end{verbatim}}
+
+\vspace{-0.5cm}
+
+\begin{center}																	
+	\begin{longtable}[h!]{L{4.5cm}C{4cm}C{4cm}}
+		
+		\caption{Ejemplos de citaciones utilizando el comando estandar \texttt{\textbackslash cite} de \LaTeX\ y el comando \texttt{\textbackslash citet},
+			proporcionado por el paquete \texttt{natbib}.}\\  																	
+		
+		\TR																			
+		\multicolumn{3}{>{\columncolor[gray]{0.7}}c}{\textbf{Ejemplos de citaciones}}\\																			
+		\hline																			
+		Tipo da Publicación & \verb|\cite| & \verb|\citet|\\
+		\MR									
+		Libro & \cite{book-example} & \citet{book-example}\\
+		Artículo & \cite{article-example} & \citet{article-example}\\
+		Informe & \cite{techreport-example} & \citet{techreport-example}\\
+		Informe & \cite{techreport-exampleIn} & \citet{techreport-exampleIn}\\
+		Anales de Congreso & \cite{inproceedings-example} &
+		\citet{inproceedings-example}\\
+		Series & \cite{incollection-example} & \citet{incollection-example}\\
+		En el libro & \cite{inbook-example} & \citet{inbook-example}\\
+		Disertación de Maestría & \cite{mastersthesis-example} &
+		\citet{mastersthesis-example}\\
+		Tesis de Doctorado & \cite{phdthesis-example} & \citet{phdthesis-example}\\														
+		\BR	
+		\label{tab:natbib_these}	
+		
+	\end{longtable}																			
+\end{center}
+
+\vspace{-2.5cm}
+
+\bibliography{references}

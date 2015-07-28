@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2014/Arch Linux)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: natbib_alpha.aux
+The style file: alpha.bst
+Database file #1: references.bib
+Warning--can't use both author and editor fields in inbook-example
+Warning--empty institution in techreport-example
+You've used 9 entries,
+            2543 wiz_defined-function locations,
+            623 strings with 6127 characters,
+and the built_in function-call counts, 3098 in all, are:
+= -- 316
+> -- 89
+< -- 14
++ -- 26
+- -- 25
+* -- 200
+:= -- 510
+add.period$ -- 28
+call.type$ -- 9
+change.case$ -- 48
+chr.to.int$ -- 9
+cite$ -- 11
+duplicate$ -- 155
+empty$ -- 242
+format.name$ -- 41
+if$ -- 644
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 7
+newline$ -- 48
+num.names$ -- 27
+pop$ -- 49
+preamble$ -- 1
+purify$ -- 56
+quote$ -- 0
+skip$ -- 110
+stack$ -- 0
+substring$ -- 149
+swap$ -- 30
+text.length$ -- 14
+text.prefix$ -- 7
+top$ -- 0
+type$ -- 64
+warning$ -- 2
+while$ -- 26
+width$ -- 13
+write$ -- 127
+(There were 2 warnings)

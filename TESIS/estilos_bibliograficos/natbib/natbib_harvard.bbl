@@ -1,0 +1,60 @@
+\begin{thebibliography}{}
+
+\harvarditem[Abraham et~al.]{Abraham, et~al.}{1988}{book-example}
+R.~Abraham, et~al. (1988).
+\newblock {\em Manifolds, Tensor Analysis, and Applications}.
+\newblock Springer-Verlag, New York, 2 edn.
+
+\harvarditem[Cowin]{Cowin}{1987}{incollection-example}
+S.~C. Cowin (1987).
+\newblock `Adaptive Anisotropy: An Example in Living Bone'.
+\newblock In {\em Non-Classical Continuum Mechanics}, vol. 122 of {\em London
+  Mathematical Society Lecture Note Series}, pp. 174--186. Cambridge University
+  Press.
+
+\harvarditem[Edwards]{Eckert \& Goldstein}{1976}{inbook-example}
+D.~K. Edwards (1976).
+\newblock {\em Thermal Radiation Measurements}, chap.~10.
+\newblock Hemisphere Publishing Corporation, New York, USA, 2 edn.
+
+\harvarditem[Garret]{Garret}{1977}{techreport-exampleIn}
+D.~A. Garret (1977).
+\newblock `The Microscopic Detection of Corrosion in Aluminum Aircraft
+  Structures with Thermal Neutron Beams and Film Imaging Methods'.
+\newblock In: Report NBSIR 78-1434, National Bureau of Standards, Washington,
+  D.C.
+
+\harvarditem[Gurtin]{Gurtin}{1977}{inproceedings-example}
+M.~E. Gurtin (1977).
+\newblock `On the nonlinear theory of elasticity'.
+\newblock In {\em Proceedings of the International Symposium on Continuum
+  Mechanics and Partial Differential Equations: Contemporary Developments in
+  Continuum Mechanics and Partial Differential Equations}, pp. 237--253, Rio de
+  Janeiro.
+
+\harvarditem[Iesan]{Iesan}{1996}{article-example}
+D.~Iesan (1996).
+\newblock `Existence Theorems in the Theory of Mixtures'.
+\newblock {\em Journal of Elasticity} {\bf 42}(2):145--163.
+
+\harvarditem[Maestrello]{Maestrello}{1976}{techreport-example}
+L.~Maestrello (1976).
+\newblock `Two-Point Correlations of Sound Pressure in the Far Field of a Jet:
+  Experiment'.
+\newblock {NASA} {TM}~{X}-72835.
+
+\harvarditem[Paes~Junior]{Paes~Junior}{1994}{phdthesis-example}
+H.~R. Paes~Junior (1994).
+\newblock {\em Influ{\^e}ncia da Espessura da Camada Intr{\'i}nseca e Energia
+  do Foton na Degrada{\c c}\~ao de C{\'e}lulas Solares de Sil{\'i}cio Amorfo
+  Hidrogenado}.
+\newblock Tese de {D.Sc.}, COPPE/UFRJ, Rio de Janeiro, RJ, Brasil.
+
+\harvarditem[Tuntomo]{Tuntomo}{1990}{mastersthesis-example}
+A.~Tuntomo (1990).
+\newblock `Transport Phenomena in a Small Particle with Internal Radiant
+  Absorption'.
+\newblock {Ph.D.} dissertation, University of California at Berkeley, Berkeley,
+  California, USA.
+
+\end{thebibliography}

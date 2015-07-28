@@ -1,0 +1,52 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\astroncite{Abraham et~al.}{1988}]{book-example}
+Abraham, R., Marsden, J.~E., and Ratiu, T.: 1988,
+\newblock {\em Manifolds, Tensor Analysis, and Applications},
+\newblock Springer-Verlag, New York, 2 edition
+
+\bibitem[\protect\astroncite{Cowin}{1987}]{incollection-example}
+Cowin, S.~C.: 1987,
+\newblock in {\em Non-Classical Continuum Mechanics}, Vol. 122 of {\em London
+  Mathematical Society Lecture Note Series}, pp 174--186, Cambridge University
+  Press
+
+\bibitem[\protect\astroncite{Edwards}{1976}]{inbook-example}
+Edwards, D.~K.: 1976,
+\newblock {\em Thermal Radiation Measurements}, Chapt.~10,
+\newblock Hemisphere Publishing Corporation, New York, USA, 2 edition
+
+\bibitem[\protect\astroncite{Garret}{1977}]{techreport-exampleIn}
+Garret, D.~A.: 1977,
+\newblock {\em The Microscopic Detection of Corrosion in Aluminum Aircraft
+  Structures with Thermal Neutron Beams and Film Imaging Methods},
+\newblock In: Report NBSIR 78-1434, National Bureau of Standards, Washington,
+  D.C.
+
+\bibitem[\protect\astroncite{Gurtin}{1977}]{inproceedings-example}
+Gurtin, M.~E.: 1977,
+\newblock in {\em Proceedings of the International Symposium on Continuum
+  Mechanics and Partial Differential Equations: Contemporary Developments in
+  Continuum Mechanics and Partial Differential Equations}, pp 237--253, Rio de
+  Janeiro
+
+\bibitem[\protect\astroncite{Iesan}{1996}]{article-example}
+Iesan, D.: 1996,
+\newblock {\em Journal of Elasticity} {\bf 42(2)}, 145
+
+\bibitem[\protect\astroncite{Maestrello}{1976}]{techreport-example}
+Maestrello, L.: 1976,
+\newblock {\em Two-Point Correlations of Sound Pressure in the Far Field of a
+  Jet: Experiment},
+\newblock {NASA} {TM}~{X}-72835
+
+\bibitem[\protect\astroncite{Paes~Junior}{1994}]{phdthesis-example}
+Paes~Junior, H.~R.: 1994,
+\newblock Tese de {D.Sc.}, COPPE/UFRJ, Rio de Janeiro, RJ, Brasil
+
+\bibitem[\protect\astroncite{Tuntomo}{1990}]{mastersthesis-example}
+Tuntomo, A.: 1990,
+\newblock {Ph.D.} dissertation, University of California at Berkeley, Berkeley,
+  California, USA
+
+\end{thebibliography}

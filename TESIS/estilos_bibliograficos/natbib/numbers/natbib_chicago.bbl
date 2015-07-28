@@ -1,0 +1,61 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Abraham, Marsden, and Ratiu}{Abraham
+  et~al.}{1988}]{book-example}
+Abraham, R., J.~E. Marsden, and T.~Ratiu (1988).
+\newblock {\em Manifolds, Tensor Analysis, and Applications\/} (2 ed.).
+\newblock New York: Springer-Verlag.
+
+\bibitem[\protect\citeauthoryear{Cowin}{Cowin}{1987}]{incollection-example}
+Cowin, S.~C. (1987).
+\newblock Adaptive anisotropy: An example in living bone.
+\newblock In {\em Non-Classical Continuum Mechanics}, Volume 122 of {\em London
+  Mathematical Society Lecture Note Series}, pp.\  174--186. Cambridge
+  University Press.
+
+\bibitem[\protect\citeauthoryear{Edwards}{Edwards}{1976}]{inbook-example}
+Edwards, D.~K. (1976).
+\newblock {\em Thermal Radiation Measurements\/} (2 ed.)., Chapter~10.
+\newblock New York, USA: Hemisphere Publishing Corporation.
+
+\bibitem[\protect\citeauthoryear{Garret}{Garret}{1977}]{techreport-exampleIn}
+Garret, D.~A. (1977).
+\newblock The microscopic detection of corrosion in aluminum aircraft
+  structures with thermal neutron beams and film imaging methods.
+\newblock In: Report NBSIR 78-1434, National Bureau of Standards, Washington,
+  D.C.
+
+\bibitem[\protect\citeauthoryear{Gurtin}{Gurtin}{1977}]{inproceedings-example}
+Gurtin, M.~E. (1977, August).
+\newblock On the nonlinear theory of elasticity.
+\newblock In {\em Proceedings of the International Symposium on Continuum
+  Mechanics and Partial Differential Equations: Contemporary Developments in
+  Continuum Mechanics and Partial Differential Equations}, Rio de Janeiro, pp.\
+   237--253.
+
+\bibitem[\protect\citeauthoryear{Iesan}{Iesan}{1996}]{article-example}
+Iesan, D. (1996, February).
+\newblock Existence theorems in the theory of mixtures.
+\newblock {\em Journal of Elasticity\/}~{\em 42\/}(2), 145--163.
+
+\bibitem[\protect\citeauthoryear{Maestrello}{Maestrello}{1976}]{techreport-example}
+Maestrello, L. (1976).
+\newblock Two-point correlations of sound pressure in the far field of a jet:
+  Experiment.
+\newblock {NASA} {TM}~{X}-72835.
+
+\bibitem[\protect\citeauthoryear{Paes~Junior}{Paes~Junior}{1994}]{phdthesis-example}
+Paes~Junior, H.~R. (1994).
+\newblock {\em Influ{\^e}ncia da Espessura da Camada Intr{\'i}nseca e Energia
+  do Foton na Degrada{\c c}\~ao de C{\'e}lulas Solares de Sil{\'i}cio Amorfo
+  Hidrogenado}.
+\newblock Tese de {D.Sc.}, COPPE/UFRJ, Rio de Janeiro, RJ, Brasil.
+
+\bibitem[\protect\citeauthoryear{Tuntomo}{Tuntomo}{1990}]{mastersthesis-example}
+Tuntomo, A. (1990).
+\newblock Transport phenomena in a small particle with internal radiant
+  absorption.
+\newblock {Ph.D.} dissertation, University of California at Berkeley, Berkeley,
+  California, USA.
+
+\end{thebibliography}

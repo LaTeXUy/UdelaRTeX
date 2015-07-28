@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2014/Arch Linux)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: natbib_oxford_en.aux
+The style file: oxford_en.bst
+Database file #1: references.bib
+Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
+Warning--can't use both author and editor fields in inbook-example
+Warning--can't use both author and editor fields in inbook-example
+Warning--empty institution in techreport-example
+Warning--empty institution in techreport-example
+You've used 9 entries,
+            3504 wiz_defined-function locations,
+            745 strings with 6634 characters,
+and the built_in function-call counts, 5439 in all, are:
+= -- 476
+> -- 119
+< -- 34
++ -- 44
+- -- 33
+* -- 521
+:= -- 802
+add.period$ -- 19
+call.type$ -- 9
+change.case$ -- 59
+chr.to.int$ -- 21
+cite$ -- 13
+duplicate$ -- 314
+empty$ -- 565
+format.name$ -- 51
+if$ -- 1194
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 14
+newline$ -- 30
+num.names$ -- 45
+pop$ -- 102
+preamble$ -- 1
+purify$ -- 47
+quote$ -- 0
+skip$ -- 231
+stack$ -- 0
+substring$ -- 289
+swap$ -- 104
+text.length$ -- 14
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 75
+warning$ -- 4
+while$ -- 45
+width$ -- 0
+write$ -- 162
+(There were 4 warnings)

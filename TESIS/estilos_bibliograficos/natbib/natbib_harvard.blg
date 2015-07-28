@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2014/Arch Linux)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: natbib_harvard.aux
+The style file: harvard.bst
+Database file #1: references.bib
+`editor' is a missing field, not a string, for entry book-example
+while executing---line 1236 of file harvard.bst
+Warning--can't use both author and editor fields in inbook-example
+Warning--empty institution in techreport-example
+You've used 9 entries,
+            2330 wiz_defined-function locations,
+            581 strings with 5598 characters,
+and the built_in function-call counts, 3765 in all, are:
+= -- 400
+> -- 118
+< -- 22
++ -- 34
+- -- 32
+* -- 271
+:= -- 662
+add.period$ -- 28
+call.type$ -- 9
+change.case$ -- 51
+chr.to.int$ -- 9
+cite$ -- 11
+duplicate$ -- 174
+empty$ -- 259
+format.name$ -- 50
+if$ -- 766
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 7
+newline$ -- 48
+num.names$ -- 45
+pop$ -- 54
+preamble$ -- 1
+purify$ -- 56
+quote$ -- 0
+skip$ -- 138
+stack$ -- 0
+substring$ -- 195
+swap$ -- 46
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 100
+warning$ -- 2
+while$ -- 34
+width$ -- 0
+write$ -- 136
+(There was 1 error message)
