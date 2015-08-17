@@ -8,12 +8,17 @@ nogroupskip,                                         %quita los espacios entre d
 nopostdot,                                            %quita el punto final en los acrónimos
 ]{glossaries}
 
-\hypersetup{ colorlinks = false } % false para imprimir, true para ver
+\hypersetup{ colorlinks = true } % false para imprimir, true para ver
 
 \usepackage{natbib} % Para algunos estilos bibliográficos
 \bibliographystyle{estilos_bibliograficos/natbib/apalike}
 
 \loadglossary
+
+% A su vez, la clase udelar.cls ya tiene los siguientes paquetes cargados que podrían ser de interés para el usuario:
+% 
+% {color},{hyphenat},{appendix},{lastpage},{babel},{inputenc},{amsmath,amssymb},{ifthen},{graphicx},{caption}
+% {setspace},{tabularx},{eqparbox},{ltxcmds},{titletoc},{xcolor},{lineno},{xwatermark}
 
 
 \begin{document}
@@ -66,7 +71,7 @@ nopostdot,                                            %quita el punto final en l
   
   \listoftables
   
-  %\listadesimbolos 		 %Lista de símbolos
+  \listadesimbolos 		 %Lista de símbolos
   %\listadenotaciones 	     %Lista de notaciones
   \listadesiglas 		     %Lista de siglas
 
