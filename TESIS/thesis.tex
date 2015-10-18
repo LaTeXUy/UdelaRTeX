@@ -1,37 +1,49 @@
-\documentclass[msc,oneside,a4paper]{udelar}
+% ===== INICIO DEL PREÁMBULO =====
+
+\documentclass[msc,oneside,a4paper]{udelar} % Poner msc para Maestría, dsc para Doctorado
 
 \usepackage[
 acronyms, 											 %utiliza el glosario de acronimos
 nohypertypes={acronym,notacion,simbolos,glosario}, %quita los links en el texto al glosario
 %nonumberlist,                                        %quita los links en los glosarios al texto
 nogroupskip,                                         %quita los espacios entre diferentes grupos dentro de un glosario
-nopostdot,                                            %quita el punto final en los acrónimos
+nopostdot, 											 %quita el punto final en los acrónimos                                    
 ]{glossaries}
 
 \hypersetup{ colorlinks = true } % false para imprimir, true para ver
 
+% Ver los documentos de estilos bibliográficos para editar estas siguientes 2 líneas
 \usepackage{natbib} % Para algunos estilos bibliográficos
 \bibliographystyle{estilos_bibliograficos/natbib/apalike}
 
+
+
 \loadglossary
 
-% A su vez, la clase udelar.cls ya tiene los siguientes paquetes cargados que podrían ser de interés para el usuario:
+% A su vez, la clase udelar.cls ya tiene los siguientes paquetes cargados automáticamente, que podrían ser de interés para el usuario:
 % 
 % {color},{hyphenat},{appendix},{lastpage},{babel},{inputenc},{amsmath,amssymb},{ifthen},{graphicx},{caption}
 % {setspace},{tabularx},{eqparbox},{ltxcmds},{titletoc},{xcolor},{lineno},{xwatermark}
 
+% Si se quieren agregar más paquetes, se recomienda colocarlos a partir de esta linea y antes de \begin{document}.
+
+
+
+% ===== FIN DEL PREÁMBULO =====
+
+% ===== INICIO DEL DOCUMENTO =====
 
 \begin{document}
 
 
 
-  \title{Título de la Tesis}
-  \subtitle{Subtítulo de la Tesis}
-  \institutelogo
-  \author{Nombres del autor}{Apellidos del autor}
+  \title{Título de la tesis}
+  \subtitle{Subtítulo de la tesis}
+  \institutelogo{3} % Carga cantidad de logos seleccionados, con máximo de 3 logos.
+  \author{Nombres del autor}{Apellidos}
   
   \director{Prof.}{Nombre del Director de Tesis}{Apellido}{D.Sc.}
-  \codirector{Prof.}{Nombre del 1er Codirector}{Apellido}{D.Sc.}
+  \codirector{Prof.}{Nombre del 1er Codirector}{Apellido}{D.Sc.}  % Comentar estas líneas si no son necesarias
   \codirector{Prof.}{Nombre del 2do Codirector}{Apellido}{D.Sc.}
   \codirector{Prof.}{Nombre del 3er Codirector}{Apellido}{D.Sc.}
   \directoracademico{Prof.}{Nombre del Director Académico de Tesis}{Apellido}{D.Sc.}
@@ -43,12 +55,12 @@ nopostdot,                                            %quita el punto final en l
   \examiner{Prof.}{Nombre del 5to Examinador}{Apellido}{Ph.D.}
   
   \graduatename{Ingeniería Estructural}
-  \institute{Facultad de Ingeniería}{FIng}
-  \institute{Facultad de Medicina}{FMed}
+  \institute{Facultad de Ingeniería}{FIng}  % La primer institución es la principal
+  \institute{Facultad de Medicina}{FMed}  % Agregar copias de esta línea para agregar instituciones.
   \graduatelocation{Montevideo}{Uruguay}
   
   
-  \date{22}{11}{2014}
+  \date{11}{10}{2015} % Fecha del documento
 
   \keyword{1ra palabra clave}
   \keyword{2da palabra clave}
@@ -56,9 +68,9 @@ nopostdot,                                            %quita el punto final en l
   \keyword{4ta palabra clave}
   \keyword{5ta~palabra clave}
         
-  \maketitle
+  \maketitle  % Comando que genera el título de la tesis.
   
-  \frontmatter
+  \frontmatter  % Comando que genera la poradilla, el catalogo y el tribunal de evaluación. NO COMENTAR
   
   \include{ded_agr_epi/dedicacion}
   \include{ded_agr_epi/agradecimientos}
@@ -67,17 +79,18 @@ nopostdot,                                            %quita el punto final en l
   \include{resumen/abstract}
   
   
-  \listoffigures
+%  \listoffigures	         %Lista de figuras
+%  \listoftables	             %Lista de tablas
   
-  \listoftables
-  
-  \listadesimbolos 		 %Lista de símbolos
+  \listadesimbolos 		     %Lista de símbolos
   %\listadenotaciones 	     %Lista de notaciones
   \listadesiglas 		     %Lista de siglas
 
-  \tableofcontents
+  \tableofcontents           %Tabla de contenidos
 
-  \mainmatter
+  \mainmatter % Comando que genera las listas y capítulos. NO COMENTAR
+  
+  
   \include{capitulos/chap01}
   \include{capitulos/chap02}
   \include{capitulos/chap03}
@@ -86,7 +99,7 @@ nopostdot,                                            %quita el punto final en l
 
 
 
-  \backmatter
+  \backmatter % Comando que generalos apéndices, anexos y bibliografía. NO COMENTAR
   
   \bibliography{bibliografia}
   \bibend
@@ -107,3 +120,5 @@ nopostdot,                                            %quita el punto final en l
   
   
 \end{document}
+
+% ===== FIN DEL DOCUMENTO =====

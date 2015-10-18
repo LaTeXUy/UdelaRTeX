@@ -12,6 +12,7 @@
 %% at the Universidad de la República (UdelaR).
 %% 
 %% Copyright (C) 2015 Pablo Castrillo Green   URL http://www.fing.edu.uy/~pabloc/
+%% Copyright (C) 2015 Mihdí Anthony Caballero Baher   URL http://www.fing.edu.uy/~mcaballero/
 %% 
 %% This program is free software; you can redistribute it and/or modify
 %% it under the terms of the GNU General Public License version 3 as
@@ -26,7 +27,7 @@
 %% version 3 along with this package (see COPYING file).
 %% If not, see <http://www.gnu.org/licenses/>.
 %% 
-%% Author(s): Pablo Castrillo Green
+%% Author(s): Pablo Castrillo Green  / Mihdí Caballero
 %% 
 %% {1417}
 %% \CharacterTable
@@ -46,11 +47,11 @@
 %%   Right brace   \}     Tilde         \~}
 %%
 \def\filename{udelar.dtx}
-\def\fileversion{v2.0}
-\def\filedate{2014/10/21}
+\def\fileversion{v2.2.3}
+\def\filedate{2015/10/10}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{udelar}[\filedate\ \fileversion\ Fing Dissertations and Thesis]
-\LoadClass[11pt,a4paper]{book}
+\LoadClass[12pt,a4paper]{book}
 
 %=========================
 %==== INICIO PAQUETES ====
@@ -67,6 +68,8 @@
 \RequirePackage{amsmath,amssymb}
 \RequirePackage{ifthen}
 \RequirePackage{graphicx}
+\RequirePackage{float}
+\RequirePackage{caption}
 \RequirePackage[font=small,labelfont=bf]{caption}
 \RequirePackage{setspace}
 \RequirePackage{tabularx}
@@ -83,7 +86,7 @@
             hyperfootnotes=true
             ]{hyperref} %[colorlinks]
 \RequirePackage[a4paper,bindingoffset=0.0cm,vcentering=true,%
-top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry}
+top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los margins
 \RequirePackage[pagewise]{lineno}
 \RequirePackage[printwatermark]{xwatermark}
 \RequirePackage{xcolor}
@@ -232,7 +235,8 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry}
 %==== Logo institución ====
 
 \newcount\@institutelogo\@institutelogo0
-\newcommand\institutelogo{%
+\newcommand\institutelogo[1]{%
+  \global\def\@instituteslogos{#1}
   \global\advance\@institutelogo by 1
 }
 
@@ -252,7 +256,7 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry}
 }
 
 \newcommand\local@codirectorstring{Codirector}
-\newcommand\foreign@codirectorstring{Co-dvisor}
+\newcommand\foreign@codirectorstring{Co-advisor}
 
 \newcount\@codirector\@codirector0
 \newcommand\codirector[4]{% Comando para los codirectores
@@ -343,20 +347,35 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry}
   \pagenumbering{roman}
   \pagestyle{empty}
   \setcounter{page}{1}
-  \includegraphics[height=0.08\textheight]{imagenes/logo_udelar}\hfill
+  \hspace{-0.5cm} \includegraphics[height=0.08\textheight]{imagenes/logo_udelar} \hfill
   \ifnum\@institutelogo>0
-  \includegraphics[height=0.08\textheight]{imagenes/logo_institucion}
-  \fi
+	  \ifnum\@instituteslogos>2
+		  \includegraphics[height=0.08\textheight]{imagenes/logo_institucion1}  \hfil
+		  \includegraphics[height=0.08\textheight]{imagenes/logo_institucion2}  \hfil
+		  \includegraphics[height=0.08\textheight]{imagenes/logo_institucion3}
+	  \else
+		  \ifnum\@instituteslogos>1
+			  \includegraphics[height=0.08\textheight]{imagenes/logo_institucion1}  \hfil
+			  \includegraphics[height=0.08\textheight]{imagenes/logo_institucion2}
+		  \else
+		      \ifnum\@instituteslogos>0
+			  \includegraphics[height=0.08\textheight]{imagenes/logo_institucion1}
+			  \else
+			  %
+			  \fi
+		  \fi
+      \fi
+  \fi	
 	  \vspace{1.05cm}
 	  \begin{center}
 	      \vspace*{3cm}
-		  \nohyphens{\Huge{\local@title}}\par
+		  \nohyphens{\huge{\local@title}}\par
 		  \vspace*{0.3cm}
 		  \ifnum\@subtitle>0
 		  \nohyphens{\Large{\local@subtitle}}\par
 		  \fi
 		  \vspace*{2cm}
-		  \nohyphens{\@authname\ \@authsurn}\par
+		  \nohyphens{\large{\@authname\ \@authsurn}}\par
 	  \end{center}
 	  \vspace{\fill}
 	  \begin{center}
@@ -391,19 +410,34 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry}
 \newcommand\makefrontpage{%
 \cleardoublepage
 \pagestyle{empty}
-\includegraphics[height=0.08\textheight]{imagenes/logo_udelar}\hfill
+  \hspace{-0.5cm} \includegraphics[height=0.08\textheight]{imagenes/logo_udelar} \hfill
   \ifnum\@institutelogo>0
-    \includegraphics[height=0.08\textheight]{imagenes/logo_institucion}
-    \fi
+	  \ifnum\@instituteslogos>2
+		  \includegraphics[height=0.08\textheight]{imagenes/logo_institucion1}  \hfil
+		  \includegraphics[height=0.08\textheight]{imagenes/logo_institucion2}  \hfil
+		  \includegraphics[height=0.08\textheight]{imagenes/logo_institucion3}
+	  \else
+		  \ifnum\@instituteslogos>1
+			  \includegraphics[height=0.08\textheight]{imagenes/logo_institucion1}  \hfil
+			  \includegraphics[height=0.08\textheight]{imagenes/logo_institucion2}
+		  \else
+			  \ifnum\@instituteslogos>0
+				  \includegraphics[height=0.08\textheight]{imagenes/logo_institucion1}
+			  \else
+				  %
+			  \fi
+		  \fi
+	  \fi
+  \fi
 \vspace{1.05cm}
 \begin{center}
-	 \nohyphens{\Huge{\local@title}}\par
+	 \nohyphens{\huge{\local@title}}\par
 	 \vspace*{0.3cm}
 	 \ifnum\@subtitle>0
 	 \nohyphens{\Large{\local@subtitle}}\par
 	 \fi
 	 \vspace*{2cm}
-	 \nohyphens{\@authname\ \@authsurn}\par
+	 \nohyphens{\large{\@authname\ \@authsurn}}\par
 \end{center}
 \vspace*{1cm}
 \begin{flushright}
@@ -600,9 +634,9 @@ Palabra clave:\\
 	\fi
 \else
 	\ifnum\count2<\value{keywords}
-	(\csname UdelarKeyword:\the\count1 \endcsname),
+	\csname UdelarKeyword:\the\count1 \endcsname,
 	\else
-	(\csname UdelarKeyword:\the\count1 \endcsname).
+	\csname UdelarKeyword:\the\count1 \endcsname.
 	\fi
 \fi
 \advance\count1 by 1
@@ -639,9 +673,9 @@ Keyword:\\
 	\fi
 \else
 	\ifnum\count2<\value{keywords}
-	(\csname UdelarKeyword:\the\count1 \endcsname),
+	\csname UdelarKeyword:\the\count1 \endcsname,
 	\else
-	(\csname UdelarKeyword:\the\count1 \endcsname).
+	\csname UdelarKeyword:\the\count1 \endcsname.
 	\fi
 \fi
 \advance\count1 by 1
