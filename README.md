@@ -1,5 +1,5 @@
 ### Version
-2.2.3
+2.2.4
 
 Para descargar los archivos de la tesis, hacer click en el botón azul con la flecha hacia abajo.
 
