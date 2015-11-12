@@ -147,7 +147,7 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
 %==== INICIO INTERLINEADO ====
 %=============================
 
-\onehalfspacing % separación entre lineas
+\onehalfspacing % separación entre lineas (interlineado)
 
 \let\oldenumerate\enumerate %cambiar el entorno enumerate
 \renewcommand{\enumerate}{
@@ -334,10 +334,17 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
 
 %==== Palabras claves ====
 \newcounter{keywords}
-\newcommand\keyword[1]{% Palabras claves
+\newcommand\keyword[1]{% Palabras claves en español
   \global\@namedef{UdelarKeyword:\expandafter\the\c@keywords}{#1}
   \global\addtocounter{keywords}{1}
 }
+%
+\newcounter{foreignkeywords}
+\newcommand\foreignkeyword[1]{% Palabras claves en inglés
+  \global\@namedef{UdelarForeignKeyword:\expandafter\the\c@foreignkeywords}{#1}
+  \global\addtocounter{foreignkeywords}{1}
+}
+
 %=========================
 
 %==== Página I ====
@@ -369,6 +376,7 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
 	  \vspace{1.05cm}
 	  \begin{center}
 	      \vspace*{3cm}
+	      \doublespacing
 		  \nohyphens{\huge{\local@title}}\par
 		  \vspace*{0.3cm}
 		  \ifnum\@subtitle>0
@@ -431,6 +439,7 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
   \fi
 \vspace{1.05cm}
 \begin{center}
+     \doublespacing
 	 \nohyphens{\huge{\local@title}}\par
 	 \vspace*{0.3cm}
 	 \ifnum\@subtitle>0
@@ -655,7 +664,7 @@ Palabra clave:\\
    \vspace*{20mm}
 \end{otherlanguage}}{%
 \vspace*{20mm}
-\ifnum\value{keywords}>1
+\ifnum\value{foreignkeywords}>1
 \noindent
 Keywords:\\ 
 \else
@@ -664,18 +673,18 @@ Keyword:\\
 \fi
 \count1=0
 \count2=1
-\nohyphens{\@whilenum \count1<\value{keywords} \do {%
+\nohyphens{\@whilenum \count1<\value{foreignkeywords} \do {%
 \ifnum\count2<4
-	\ifnum\count2<\value{keywords}
-	\csname UdelarKeyword:\the\count1 \endcsname,
+	\ifnum\count2<\value{foreignkeywords}
+	\csname UdelarForeignKeyword:\the\count1 \endcsname,
 	\else
-	\csname UdelarKeyword:\the\count1 \endcsname.
+	\csname UdelarForeignKeyword:\the\count1 \endcsname.
 	\fi
 \else
-	\ifnum\count2<\value{keywords}
-	\csname UdelarKeyword:\the\count1 \endcsname,
+	\ifnum\count2<\value{foreignkeywords}
+	\csname UdelarForeignKeyword:\the\count1 \endcsname,
 	\else
-	\csname UdelarKeyword:\the\count1 \endcsname.
+	\csname UdelarForeignKeyword:\the\count1 \endcsname.
 	\fi
 \fi
 \advance\count1 by 1
