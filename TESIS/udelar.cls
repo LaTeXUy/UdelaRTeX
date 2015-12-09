@@ -487,7 +487,8 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
 \begin{flushright}
 \count1=0
 \nohyphens{\@whilenum \count1<\@examiner \do {
-\eqparbox{signture@list}{\hrulefill}\\
+\eqparbox{signture@list}{\rule{0.5\textwidth}{.4pt}}\\
+%\eqparbox{signture@list}{\hrulefill}\\ 
 \eqparbox{signture@list}%
 {
 \vspace{0.3cm}
