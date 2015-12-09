@@ -1,7 +1,7 @@
 ### Version
-2.2.4
+2.2.5
 
-Para descargar los archivos de la tesis, hacer click en el botón azul con la flecha hacia abajo.
+Para descargar el ZIP con los archivos de la tesis, hacer click en el botón con la flecha hacia abajo.
 
 #### Más Información
 - [Creación de Usuario](https://docs.google.com/document/d/1DEbMORIRLwqj0ZQyyoMUMoBmUd3VEIvxLzVBPBaczr0/pub)
