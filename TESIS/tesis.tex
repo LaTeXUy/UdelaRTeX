@@ -1,18 +1,18 @@
 % ===== INICIO DEL PREÁMBULO =====
 
-\documentclass[msc,oneside,a4paper]{udelar} % Poner msc para Maestría, dsc para Doctorado
+\documentclass[msc,oneside,a4paper]{udelar} % Poner msc para Maestría, dsc para Doctorado.
 
 \usepackage[
-acronyms, 											 %utiliza el glosario de acronimos
-nohypertypes={acronym,notacion,simbolos,glosario}, %quita los links en el texto al glosario
-%nonumberlist,                                        %quita los links en los glosarios al texto
-nogroupskip,                                         %quita los espacios entre diferentes grupos dentro de un glosario
-nopostdot, 											 %quita el punto final en los acrónimos                                    
+acronyms, 											 %utiliza el glosario de acronimos.
+nohypertypes={acronym,notacion,simbolos,glosario},   %quita los links en el texto al glosario.
+%nonumberlist,                                       %quita los links en los glosarios al texto.
+nogroupskip,                                         %quita los espacios entre diferentes grupos dentro de un glosario.
+nopostdot, 											 %quita el punto final en los acrónimos         .                           
 ]{glossaries}
 
-\hypersetup{ colorlinks = true } % false para imprimir, true para ver
+\hypersetup{ colorlinks = true } % false para imprimir, true para ver.
 
-% Ver los documentos de estilos bibliográficos para editar estas siguientes 2 líneas
+% Ver los documentos de estilos bibliográficos para editar estas siguientes 2 líneas.
 \usepackage{natbib} % Para algunos estilos bibliográficos
 \bibliographystyle{estilos_bibliograficos/natbib/apalike}
 
@@ -20,7 +20,7 @@ nopostdot, 											 %quita el punto final en los acrónimos
 
 \loadglossary
 
-% A su vez, la clase udelar.cls ya tiene los siguientes paquetes cargados automáticamente, que podrían ser de interés para el usuario:
+% A su vez, la clase udelar.cls ya tiene los siguientes paquetes cargados automáticamente, que podrían ser de interés saber para el usuario:
 % 
 % {color},{hyphenat},{appendix},{lastpage},{babel},{inputenc},{amsmath,amssymb},{ifthen},{graphicx},{caption}
 % {setspace},{tabularx},{eqparbox},{ltxcmds},{titletoc},{xcolor},{lineno},{xwatermark}
@@ -43,7 +43,7 @@ nopostdot, 											 %quita el punto final en los acrónimos
   \author{Nombres del autor}{Apellidos}
   
   \director{Prof.}{Nombre del Director de Tesis}{Apellido}{D.Sc.}
-  \codirector{Prof.}{Nombre del 1er Codirector}{Apellido}{D.Sc.}  % Comentar estas líneas si no son necesarias
+  \codirector{Prof.}{Nombre del 1er Codirector}{Apellido}{D.Sc.}  % Comentar estas líneas si no son necesarias.
   \codirector{Prof.}{Nombre del 2do Codirector}{Apellido}{D.Sc.}
   \codirector{Prof.}{Nombre del 3er Codirector}{Apellido}{D.Sc.}
   \directoracademico{Prof.}{Nombre del Director Académico de Tesis}{Apellido}{D.Sc.}
@@ -55,12 +55,12 @@ nopostdot, 											 %quita el punto final en los acrónimos
   \examiner{Prof.}{Nombre del 5to Examinador}{Apellido}{Ph.D.}
   
   \graduatename{Ingeniería Estructural}
-  \institute{Facultad de Ingeniería}{FIng}  % La primer institución es la principal
+  \institute{Facultad de Ingeniería}{FIng}  % La primer institución es la principal.
   \institute{Facultad de Medicina}{FMed}  % Agregar copias de esta línea para agregar instituciones.
   \graduatelocation{Montevideo}{Uruguay}
   
   
-  \date{11}{10}{2015} % Fecha del documento
+  \date{11}{10}{2015} % Fecha del documento.
 
   \keyword{1ra palabra clave}
   \keyword{2da palabra clave}
@@ -76,7 +76,7 @@ nopostdot, 											 %quita el punto final en los acrónimos
         
   \maketitle  % Comando que genera el título de la tesis.
   
-  \frontmatter  % Comando que genera la poradilla, el catalogo y el tribunal de evaluación. NO COMENTAR
+  \frontmatter  % Comando que genera la portadilla, el catalogo y el tribunal de evaluación. NO COMENTAR
   
   \include{ded_agr_epi/dedicacion}
   \include{ded_agr_epi/agradecimientos}
@@ -85,23 +85,24 @@ nopostdot, 											 %quita el punto final en los acrónimos
   \include{resumen/abstract}
   
   
-%  \listoffigures	         %Lista de figuras
-%  \listoftables	             %Lista de tablas
+%  \listoffigures	         % Lista de figuras
+%  \listoftables	         % Lista de tablas
   
-  \listadesimbolos 		     %Lista de símbolos
-  %\listadenotaciones 	     %Lista de notaciones
-  \listadesiglas 		     %Lista de siglas
+  \listadesimbolos 		     % Lista de símbolos
+  %\listadenotaciones 	     % Lista de notaciones
+  \listadesiglas 		     % Lista de siglas
 
-  \tableofcontents           %Tabla de contenidos
+  \tableofcontents           % Tabla de contenidos
 
   \mainmatter % Comando que genera las listas y capítulos. NO COMENTAR
   
   
-  \include{capitulos/chap01}
-  \include{capitulos/chap02}
-  \include{capitulos/chap03}
-  \include{capitulos/chap04}
-  \include{capitulos/chap05}
+  \include{capitulos/chap01} % Se carga el capítulo 01
+  \include{capitulos/chap02} % Se carga el capítulo 02
+  \include{capitulos/chap03} % Se carga el capítulo 03
+  \include{capitulos/chap04} % Se carga el capítulo 04
+  \include{capitulos/chap05} % Se carga el capítulo 05
+  %Seguir copiando la linea de arriba para agregar más capítulos.
 
 
 
@@ -110,7 +111,7 @@ nopostdot, 											 %quita el punto final en los acrónimos
   \bibliography{bibliografia}
   \bibend
   
-  \glosario 			%Glosario
+  \glosario 		         % Glosario
  
   
   \apenarabicnumbering
