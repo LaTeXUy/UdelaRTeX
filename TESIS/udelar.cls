@@ -57,6 +57,8 @@
 %==== INICIO PAQUETES ====
 %=========================
 
+\RequirePackage{ulem} % Para configurar simple control de cambios
+
 \RequirePackage{color}
 
 
@@ -122,6 +124,10 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
 \addto\captionsspanish{\renewcommand{\listfigurename}{Lista de figuras}}
 \addto\captionsspanish{\renewcommand{\contentsname}{Tabla de contenidos}}
 \addto\captionsspanish{\renewcommand{\bibname}{Referencias bibliográficas}}
+
+% Comandos para control de cambios
+\newcommand{\revision}[1]{{\color{blue}{}#1}} % Para escribir texto nuevo de la revisión.
+\newcommand{\eliminar}[1]{{\color{red}\sout{#1}}} % Para marcar como eliminado el texto actual.
 
 %%==== APACITE ====
 %\renewcommand{\BOthers}[1]{et al.\hbox{}}
