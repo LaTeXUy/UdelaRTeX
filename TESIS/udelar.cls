@@ -28,6 +28,8 @@
 %% If not, see <http://www.gnu.org/licenses/>.
 %% 
 %% Author(s): Pablo Castrillo Green  / Mihdí Caballero
+%%
+%% Current developer: Mihdí Caballero
 %% 
 %% {1417}
 %% \CharacterTable
@@ -254,12 +256,28 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
   \global\def\@authsurn{#2}
 }
 
-\newcommand\director[4]{% Comando para el director de tesis
-  \global\def\@directortitle{#1}
-  \global\def\@directorname{#2}
-  \global\def\@directorsurn{#3}
-  \global\def\@directordegree{#4}
+%==== Pongo si quiero que sea un posgrado "en" algo o "de" algo ====
+\newcommand\escritura[1]{% Comando para el tipo de posgrado
+	\global\def\@tipoescritura{#1}
 }
+
+% Creo la opcion de tener varios directores de carrera
+\newcommand\local@directorstring{Director}
+\newcommand\foreign@directorstring{Director}
+
+\newcount\@director\@director0
+\newcommand\director[4]{% Comando para los directores
+	\global\@namedef{UdelarDirectorTitle:\expandafter\the\@director}{#1}
+	\global\@namedef{UdelarDirectorName:\expandafter\the\@director}{#2}
+	\global\@namedef{UdelarDirectorSurname:\expandafter\the\@director}{#3}
+	\global\@namedef{UdelarDirectorDegree:\expandafter\the\@director}{#4}
+	\global\advance\@director by 1
+	\ifnum\@director>1
+	\renewcommand\local@directorstring{Directores}
+	\renewcommand\foreign@directorstring{Directors}
+	\fi
+}
+
 
 \newcommand\local@codirectorstring{Codirector}
 \newcommand\foreign@codirectorstring{Co-advisor}
@@ -316,6 +334,23 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
 \count1=0
 \global\def\local@maininstitute{\csname InstituteName:\the\count1 \endcsname}
 \global\def\local@abbrevmaininstitute{\csname AbbrevInstituteName:\the\count1\endcsname}
+
+\newcount\@seconduniversity\@seconduniversity0
+\newcounter{seconduniversity}
+\newcommand\seconduniversity[1]{% Acá se definen los institutos del posgrado
+	\global\@namedef{SecondUniversityName:\expandafter\the\@seconduniversity}{#1}
+	\global\advance\@seconduniversity by 1
+	\global\addtocounter{seconduniversity}{1}
+}
+
+\newcount\@thirduniversity\@thirduniversity0
+\newcounter{thirduniversity}
+\newcommand\thirduniversity[1]{% Acá se definen los institutos del posgrado
+	\global\@namedef{ThirdUniversityName:\expandafter\the\@thirduniversity}{#1}
+	\global\advance\@thirduniversity by 1
+	\global\addtocounter{thirduniversity}{1}
+}
+
 
 \newcommand\graduatelocation[2]{% Nombre del posgrado
   \global\def\local@cityname{#1}
@@ -386,25 +421,38 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
 		  \nohyphens{\huge{\local@title}}\par
 		  \vspace*{0.3cm}
 		  \ifnum\@subtitle>0
-		  \nohyphens{\Large{\local@subtitle}}\par
+			  \nohyphens{\Large{\local@subtitle}}\par
 		  \fi
 		  \vspace*{2cm}
 		  \nohyphens{\large{\@authname\ \@authsurn}}\par
 	  \end{center}
 	  \vspace{\fill}
 	  \begin{center}
-	  Programa de Posgrado en \local@graduatename\\
+	  Programa de Posgrado \@tipoescritura~\local@graduatename\\
 	  \count1=0
 	  \count2=1
- 		\nohyphens{\@whilenum \count1<\@institute \do {
- 		\ifnum\count2<\value{institute}
- 		\csname InstituteName:\the\count1\endcsname,
- 		\else
- 		\hspace*{-0.15cm}\csname InstituteName:\the\count1\endcsname\\
- 		\fi
- 		\advance\count1 by 1
- 		\advance\count2 by 1}}
-	  Universidad de la Rep{\'u}blica\\
+ 	  \nohyphens{\@whilenum \count1<\@institute \do {
+ 	  \ifnum\count2<\value{institute}
+	 		\csname InstituteName:\the\count1\endcsname,
+ 	  \else
+	 		\csname InstituteName:\the\count1\endcsname\\
+ 	  \fi
+      \advance\count1 by 1
+ 	  \advance\count2 by 1}}
+	\ifnum\@seconduniversity>0
+		\ifnum\@thirduniversity>0
+			Universidad de la Rep{\'u}blica - \csname SecondUniversityName:\the\count1\endcsname - \csname ThirdUniversityName:\the\count1\endcsname \\
+		\else
+			Universidad de la Rep{\'u}blica - \csname SecondUniversityName:\the\count1\endcsname \\
+		\fi
+	\else 
+		\ifnum \@thirduniversity>0
+			Universidad de la Rep{\'u}blica - \csname ThirdUniversityName:\the\count1\endcsname \\
+		\else
+			Universidad de la Rep{\'u}blica  \\
+	    \fi
+	\fi
+	
 	  \frontpage@bottomtext
 	  \end{center}
   \end{titlepage}
@@ -460,22 +508,31 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
 		\frontcover@maintext
 		
 		\vspace{7.5mm}
-		Director de tesis: \\
-		\hspace*{0.3cm}\nohyphens{\@directordegree\ \@directortitle\ \@directorname\ \@directorsurn}
-		\vspace{5mm}
+%		Director de tesis: \\
+%		\hspace*{0.3cm}\nohyphens{\@directordegree\ \@directortitle\ \@directorname\ \@directorsurn}
+%		\vspace{5mm}
+		%
+		\ifnum\@director>0
+			\local@directorstring: \\
+			\count1=0
+			\nohyphens{\@whilenum \count1<\@director \do {
+			\hspace*{0.3cm}\csname UdelarDirectorDegree:\the\count1 \endcsname\space\csname UdelarDirectorTitle:\the\count1 \endcsname\space\csname UdelarDirectorName:\the\count1 \endcsname\space\csname UdelarDirectorSurname:\the\count1 \endcsname
+			\\
+			\advance\count1 by 1}}
+		\fi
 		
 		\ifnum\@codirector>0
-		\local@codirectorstring: \\
-		\count1=0
-		\nohyphens{\@whilenum \count1<\@codirector \do {
-		\hspace*{0.3cm}\csname UdelarCoAdvisorDegree:\the\count1 \endcsname\space\csname UdelarCoAdvisorTitle:\the\count1 \endcsname\space\csname UdelarCoAdvisorName:\the\count1 \endcsname\space\csname UdelarCoAdvisorSurname:\the\count1 \endcsname
-		\\
-		\advance\count1 by 1}}
+			\local@codirectorstring: \\
+			\count1=0
+			\nohyphens{\@whilenum \count1<\@codirector \do {
+			\hspace*{0.3cm}\csname UdelarCoAdvisorDegree:\the\count1 \endcsname\space\csname UdelarCoAdvisorTitle:\the\count1 \endcsname\space\csname UdelarCoAdvisorName:\the\count1 \endcsname\space\csname UdelarCoAdvisorSurname:\the\count1 \endcsname
+			\\
+			\advance\count1 by 1}}
 		\fi
 		
 		\ifnum\@directoracademico>0
-		Director académico: \\
-		\hspace*{0.3cm}\nohyphens{\@academicodegree\ \@academicotitle\ \@academiconame\ \@academicosurn}
+			Director académico: \\
+			\hspace*{0.3cm}\nohyphens{\@academicodegree\ \@academicotitle\ \@academiconame\ \@academicosurn}
 		\fi
 	\end{minipage}\par
 \end{flushright}
@@ -522,7 +579,20 @@ UdelarExaminerSurname:\the\count1 \endcsname\\\\ \ \ \ %
       \nohyphens{\local@title\ / \@authname\ \@authsurn.\ -\ \local@cityname:
       \count1=0
       \count2=1
-  	  Universidad de la Rep{\'u}blica, \nohyphens{\@whilenum \count1<\@institute \do {
+  	  \ifnum\@seconduniversity>0
+	  	  \ifnum\@thirduniversity>0
+		  	  Universidad de la Rep{\'u}blica, \csname SecondUniversityName:\the\count1\endcsname, \csname ThirdUniversityName:\the\count1\endcsname, 
+	  	  \else
+		  	  Universidad de la Rep{\'u}blica, \csname SecondUniversityName:\the\count1\endcsname, 
+	  	  \fi
+  	  \else 
+	  	  \ifnum \@thirduniversity>0
+		  	  Universidad de la Rep{\'u}blica, \csname ThirdUniversityName:\the\count1\endcsname, 
+	  	  \else
+		  	  Universidad de la Rep{\'u}blica,
+	  	  \fi
+  	  \fi 	  
+  	  \nohyphens{\@whilenum \count1<\@institute \do {
   	  \ifnum\count2<\value{institute}
       \csname InstituteName:\the\count1\endcsname,
       \else
@@ -538,8 +608,17 @@ UdelarExaminerSurname:\the\count1 \endcsname\\\\ \ \ \ %
       % the spacing between it and the next paragraph becomes smaller.
       % Should we manually introduce a fixed space? But how could we know that
       % a name was split? Is this happening yet?
-      Director de tesis:\par
-	  \nohyphens{\@directorname\ \@directorsurn}\par
+%      Director de tesis:\par
+%	  \nohyphens{\@directorname\ \@directorsurn}\par
+	  %
+	  \ifnum\@director>0
+	  \local@directorstring:\par
+	  \count1=0
+	  \nohyphens{\@whilenum \count1<\@director \do {
+	  		\csname UdelarDirectorName:\the\count1 \endcsname\space\csname UdelarDirectorSurname:\the\count1 \endcsname\par
+	  		\advance\count1 by 1}}
+	  \fi
+	  %
 	  \ifnum\@codirector>0
 	  \local@codirectorstring:\par
 	  \count1=0
@@ -547,13 +626,14 @@ UdelarExaminerSurname:\the\count1 \endcsname\\\\ \ \ \ %
 	  \csname UdelarCoAdvisorName:\the\count1 \endcsname\space\csname UdelarCoAdvisorSurname:\the\count1 \endcsname\par
 	  \advance\count1 by 1}}
 	  \fi
+	  %
 	  \ifnum\@directoracademico>0
 	  Director académico:\par
 	  \nohyphens{\@academiconame\ \@academicosurn}
 	  \fi
       \par
       \nohyphens{\local@doctype\ de \@degreename\ --
-       Universidad de la Rep{\'u}blica,\ Programa de \local@graduatename,\ \number\year.}\par
+       Universidad de la Rep{\'u}blica,\ Programa \@tipoescritura~\local@graduatename,\ \number\year.}\par
       Referencias bibliográficas: p. \pageref{bib:begin} -- \pageref{bib:end}.\par  
       \count1=0
       \count2=1
@@ -565,10 +645,18 @@ UdelarExaminerSurname:\the\count1 \endcsname\\\\ \ \ \ %
       \fi
       \advance\count1 by 1
       \advance\count2 by 1}} 
-      \nohyphens{I.~\@directorsurn,%
-      \ \@directorname
-      \ifthenelse{\@codirector>0}{\ \emph{et~al.}{}}.
-      II.~Universidad de la Rep{\'u}blica, Programa de Posgrado en \local@graduatename.
+%      \nohyphens{I.~\@directorsurn,%
+%      \ \@directorname
+   	  %
+   	  \ifnum\@director>0
+   	  \count1=0
+   	  \nohyphens{I.~\@whilenum \count1<\@director \do {
+   	  		\csname UdelarDirectorSurname:\the\count1 \endcsname, \space \csname UdelarDirectorName:\the\count1 \endcsname , 
+   	  		\advance\count1 by 1}
+   	  \fi
+   	  %
+      \ifthenelse{\@codirector>0}{\hspace{-2mm}\emph{et~al.}{}}.
+      II.~Universidad de la Rep{\'u}blica, Programa de Posgrado \@tipoescritura~\local@graduatename.
       III.~T{\'i}tulo.}
     \end{minipage}}
   \end{center}
@@ -578,7 +666,7 @@ UdelarExaminerSurname:\the\count1 \endcsname\\\\ \ \ \ %
 %==== Parte de la página II y III ====
 \newcommand\frontcover@maintext{
   \sloppy\nohyphens{\local@doctype\ de \@degreename\
-  presentada al Programa de Posgrado en \local@graduatename, \local@maininstitute\ de la Universidad de la Rep{\'u}blica, como parte de los requisitos
+  presentada al Programa de Posgrado \@tipoescritura~\local@graduatename, \local@maininstitute\ de la Universidad de la Rep{\'u}blica, como parte de los requisitos
   necesarios para la obtenci{\'o}n del t{\'i}tulo de
   \local@degname\ en \local@graduatename.}
 }
