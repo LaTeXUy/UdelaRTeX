@@ -62,7 +62,7 @@
 \RequirePackage{ulem} % Para configurar simple control de cambios
 
 \RequirePackage{color}
-
+\RequirePackage[perpage]{footmisc}
 
 \RequirePackage{hyphenat}
 \RequirePackage[toc]{appendix}
@@ -825,9 +825,11 @@ Keyword:\\
 %===================================================
 
 %==== Lista de símbolos, Página XII, puede ir o no ====
+
 \newcommand\listadesimbolos{%
-	\printnoidxglossary[sort=case,type=simbolos]\addcontentsline{toc}{chapter}{Lista de símbolos}
+	\printnoidxglossary[sort=case,type=simbolos,style=symbolstyle]\addcontentsline{toc}{chapter}{Lista de símbolos}
 }
+
 %======================================================
 
 %==== Lista de acrónimos, Página XIII, puede ir o no ====
@@ -964,10 +966,11 @@ Keyword:\\
 
 %===================
 
-%==== Anexos ====
-\newcommand\anexmatter{%
-\newcounter{myc}
-\setcounter{myc}{1}
+%==== Anexos ==== % Editado 21/09/2016 Pablo Castrillo
+\newcommand{\annexname}{Anexo}
+\newcommand\anexmatter{\par
+\setcounter{chapter}{0}
+\setcounter{section}{0}
 	\appendix
 	\renewcommand\appendixpagename{ANEXOS}
 	\renewcommand\appendixtocname{\textbf{Anexos}}
@@ -980,9 +983,9 @@ Keyword:\\
 			{\bfseries\hfill\contentspage}% <filler-page-format>
 	\appendixpage
 	\ifnum\@anexarabicnumbering>0
-		\renewcommand{\thechapter}{\arabic{myc}}
+		\renewcommand{\thechapter}{\arabic{chapter}}
 		\else
-		\renewcommand{\thechapter}{\Alph{myc}}
+		\renewcommand{\thechapter}{\Alph{chapter}}
 		\fi
 	\titlecontents{chapter}% <section-type>
 			[13pt]% <left>
@@ -990,10 +993,9 @@ Keyword:\\
 			{ Anexo\ \thecontentslabel\quad}% <numbered-entry-format>
 			{}% <numberless-entry-format>
 			{\titlerule*[1pc]{.}\contentspage}% <filler-page-format>
-			\setcounter{chapter}{-1}
+\renewcommand{\theHchapter}{\annexname.\thechapter}
 }
-%================
-
+%===================
 
 %% 
 %%
