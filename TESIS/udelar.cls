@@ -64,6 +64,7 @@
 \RequirePackage{color}
 \RequirePackage[perpage]{footmisc}
 
+
 \RequirePackage{hyphenat}
 \RequirePackage[toc]{appendix}
 \RequirePackage{lastpage}
@@ -825,11 +826,9 @@ Keyword:\\
 %===================================================
 
 %==== Lista de símbolos, Página XII, puede ir o no ====
-
 \newcommand\listadesimbolos{%
-	\printnoidxglossary[sort=case,type=simbolos,style=symbolstyle]\addcontentsline{toc}{chapter}{Lista de símbolos}
+	\printnoidxglossary[sort=case,type=simbolos]\addcontentsline{toc}{chapter}{Lista de símbolos}
 }
-
 %======================================================
 
 %==== Lista de acrónimos, Página XIII, puede ir o no ====
@@ -969,33 +968,36 @@ Keyword:\\
 %==== Anexos ==== % Editado 21/09/2016 Pablo Castrillo
 \newcommand{\annexname}{Anexo}
 \newcommand\anexmatter{\par
-\setcounter{chapter}{0}
-\setcounter{section}{0}
+	\setcounter{chapter}{0}
+	\setcounter{section}{0}
 	\appendix
 	\renewcommand\appendixpagename{ANEXOS}
 	\renewcommand\appendixtocname{\textbf{Anexos}}
 	\renewcommand\appendixname{Anexo}
 	\titlecontents{chapter}% <section-type>
-			[0pt]% <left>
-			{\vspace*{0.45cm}}% <above-code>
-			{\thecontentslabel\quad}% <numbered-entry-format>
-			{}% <numberless-entry-format>
-			{\bfseries\hfill\contentspage}% <filler-page-format>
+	[0pt]% <left>
+	{\vspace*{0.45cm}}% <above-code>
+	{\thecontentslabel\quad}% <numbered-entry-format>
+	{}% <numberless-entry-format>
+	{\bfseries\hfill\contentspage}% <filler-page-format>
 	\appendixpage
 	\ifnum\@anexarabicnumbering>0
-		\renewcommand{\thechapter}{\arabic{chapter}}
-		\else
-		\renewcommand{\thechapter}{\Alph{chapter}}
-		\fi
+	\renewcommand{\thechapter}{\arabic{chapter}}
+	\else
+	\renewcommand{\thechapter}{\Alph{chapter}}
+	\fi
 	\titlecontents{chapter}% <section-type>
-			[13pt]% <left>
-			{}% <above-code>
-			{ Anexo\ \thecontentslabel\quad}% <numbered-entry-format>
-			{}% <numberless-entry-format>
-			{\titlerule*[1pc]{.}\contentspage}% <filler-page-format>
-\renewcommand{\theHchapter}{\annexname.\thechapter}
+	[13pt]% <left>
+	{}% <above-code>
+	{ Anexo\ \thecontentslabel\quad}% <numbered-entry-format>
+	{}% <numberless-entry-format>
+	{\titlerule*[1pc]{.}\contentspage}% <filler-page-format>
+	\renewcommand{\theHchapter}{\annexname.\thechapter}
 }
 %===================
+
+
+
 
 %% 
 %%
