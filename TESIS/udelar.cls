@@ -59,7 +59,7 @@
 %==== INICIO PAQUETES ====
 %=========================
 
-\RequirePackage{ulem} % Para configurar simple control de cambios
+\RequirePackage[normalem]{ulem} % Para configurar simple control de cambios
 
 \RequirePackage{color}
 \RequirePackage[perpage]{footmisc}
