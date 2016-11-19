@@ -1,5 +1,5 @@
 ### Version
-2.2.9
+2.3.0
 
 Para descargar el ZIP con los archivos de la tesis, hacer click en el botón con la flecha hacia abajo que dice "Download zip".
 
