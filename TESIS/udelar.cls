@@ -192,7 +192,7 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
 \DeclareOption{msc}{%
   \newcommand{\@degree}{M.Sc.}
   \newcommand{\@degreename}{Maestr{\'i}a}
-  \newcommand{\local@degname}{Magister}
+  \newcommand{\local@degname}{Magíster}
   \newcommand\local@doctype{Tesis}
 }
 %=========================================
