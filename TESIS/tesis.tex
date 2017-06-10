@@ -1,7 +1,7 @@
 % ===== INICIO DEL PREÁMBULO =====
-
+%
 \documentclass[msc,oneside,a4paper]{udelar} % Poner msc para Maestría, dsc para Doctorado.
-
+%
 \usepackage[
 acronyms, 											 %utiliza el glosario de acronimos.
 nohypertypes={acronym,notacion,simbolos,glosario},   %quita los links en el texto al glosario.
@@ -16,8 +16,6 @@ nopostdot, 											 %quita el punto final en los acrónimos         .
 \usepackage{natbib} % Para algunos estilos bibliográficos
 \bibliographystyle{estilos_bibliograficos/natbib/apalike}
 
-
-
 \loadglossary
 
 % A su vez, la clase udelar.cls ya tiene los siguientes paquetes cargados automáticamente, que podrían ser de interés saber para el usuario:
@@ -29,33 +27,36 @@ nopostdot, 											 %quita el punto final en los acrónimos         .
 
 
 
-% ===== FIN DEL PREÁMBULO =====
+% Definición de correctores, con un máximo de tres correctores.
+\definechangesauthor[color=redtex]{JLM}			% Siglas del primer corrector 
+\definechangesauthor[color=bluetex]{JH}			% Siglas del segundo corrector
+\definechangesauthor[color=greentex]{MC}		% Siglas del tercer corrector
+
+% =====  FIN DEL PREÁMBULO  =====
 
 % ===== INICIO DEL DOCUMENTO =====
 
 \begin{document}
-
-
-
+  %
   \title{Título de la tesis}
   \subtitle{Subtítulo de la tesis}
   \institutelogo{3} % Carga cantidad de logos seleccionados, con máximo de 3 logos.
   \author{Nombres del autor}{Apellidos}
   \escritura{en} % Se indica que el programa de Posgrado sea "en" o "de" tal área.
-  
+  %
   \director{Prof.}{Nombre del Director de Tesis}{Apellido}{D.Sc.}
   \director{Prof.}{Nombre del Director de Tesis}{Apellido}{D.Sc.} % Comentar esta línea si se tiene solo un director de tesis.
   \codirector{Prof.}{Nombre del 1er Codirector}{Apellido}{D.Sc.}  % Comentar estas líneas si no son necesarias.
   \codirector{Prof.}{Nombre del 2do Codirector}{Apellido}{D.Sc.}
   \codirector{Prof.}{Nombre del 3er Codirector}{Apellido}{D.Sc.}
   \directoracademico{Prof.}{Nombre del Director Académico de Tesis}{Apellido}{D.Sc.}
-
+  %
   \examiner{Prof.}{Nombre del 1er Examinador}{Apellido}{D.Sc.}
   \examiner{Prof.}{Nombre del 2do Examinador}{Apellido}{Ph.D.}
   \examiner{Prof.}{Nombre del 3er Examinador}{Apellido}{D.Sc.}
   \examiner{Prof.}{Nombre del 4to Examinador}{Apellido}{Ph.D.}
   \examiner{Prof.}{Nombre del 5to Examinador}{Apellido}{Ph.D.}
-  
+  %
   \graduatename{Ingeniería Estructural}
   \institute{Facultad de Ingeniería}{FIng}  % La primer institución es la principal.
   \institute{Facultad de Medicina}{FMed}  % Agregar copias de esta línea para agregar instituciones.
@@ -63,74 +64,65 @@ nopostdot, 											 %quita el punto final en los acrónimos         .
   \seconduniversity{Universidad XXXXX} % Se agrega el nombre de otra universidad. Comentar esta linea si no es necesaria.
   \thirduniversity{Universidad YYYYY} % Se agrega el nombre de otra universidad. Comentar esta linea si no es necesaria.
   \graduatelocation{Montevideo}{Uruguay}
-  
-  
-  \date{15}{05}{2016} % Fecha del documento.
-
+  %
+  \date{10}{06}{2017} % Fecha del documento.
+  %
   \keyword{1ra palabra clave}
   \keyword{2da palabra clave}
   \keyword{3ra palabra clave}
   \keyword{4ta palabra clave}
   \keyword{5ta~palabra clave}
-  
+  %
   \foreignkeyword{1st keyword}
   \foreignkeyword{2nd keyword}
   \foreignkeyword{3rd keyword}
   \foreignkeyword{4th keyword}
   \foreignkeyword{5th keyword}
-        
+  %     
   \maketitle  % Comando que genera el título de la tesis.
-  
+  %
   \frontmatter  % Comando que genera la portadilla, el catalogo y el tribunal de evaluación. NO COMENTAR
-  
+  %
   \include{ded_agr_epi/dedicacion}
   \include{ded_agr_epi/agradecimientos}
   \include{ded_agr_epi/epigrafe}
   \include{resumen/resumen}
   \include{resumen/abstract}
-  
-  
+  %
 %  \listoffigures	         % Lista de figuras
 %  \listoftables	         % Lista de tablas
-  
   \listadesimbolos 		     % Lista de símbolos
   %\listadenotaciones 	     % Lista de notaciones
   \listadesiglas 		     % Lista de siglas
-
+  %
   \tableofcontents           % Tabla de contenidos
-
+  %
   \mainmatter % Comando que genera las listas y capítulos. NO COMENTAR
-  
-  
+  %
   \include{capitulos/chap01} % Se carga el capítulo 01
   \include{capitulos/chap02} % Se carga el capítulo 02
   \include{capitulos/chap03} % Se carga el capítulo 03
   \include{capitulos/chap04} % Se carga el capítulo 04
   \include{capitulos/chap05} % Se carga el capítulo 05
   %Seguir copiando la linea de arriba para agregar más capítulos.
-
-
-
+  
   \backmatter % Comando que generalos apéndices, anexos y bibliografía. NO COMENTAR
   
   \bibliography{bibliografia/biblio_1,bibliografia/biblio_2} % Agregar la cantidad de archivos .bib que se tengan para la bibliografía.
   \bibend
-  
+  % 
   \glosario 		         % Glosario
- 
-  
+  %
   \apenarabicnumbering
   \apenmatter
   \input{apendice/apendice_A}
   \input{apendice/apendice_B}
   \input{apendice/apendice_C}
-  
+  %
   \anexarabicnumbering
   \anexmatter
   \input{anexo/anexo_A}
-    
-  
-  
+  % 
 \end{document}
 
 % ===== FIN DEL DOCUMENTO =====

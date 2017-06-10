@@ -12,7 +12,7 @@
 %% at the Universidad de la República (UdelaR).
 %% 
 %% Copyright (C) 2015 Pablo Castrillo Green   URL http://www.fing.edu.uy/~pabloc/
-%% Copyright (C) 2015 Mihdí Anthony Caballero Baher   URL http://www.fing.edu.uy/~mcaballero/
+%% Copyright (C) 2015-2017 Mihdí Anthony Caballero Baher   URL http://www.fing.edu.uy/~mcaballero/
 %% 
 %% This program is free software; you can redistribute it and/or modify
 %% it under the terms of the GNU General Public License version 3 as
@@ -49,7 +49,7 @@
 %%   Right brace   \}     Tilde         \~}
 %%
 \def\filename{udelar.dtx}
-\def\fileversion{v2.2.3}
+\def\fileversion{v2.3.2}
 \def\filedate{2015/10/10}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{udelar}[\filedate\ \fileversion\ Fing Dissertations and Thesis]
@@ -59,7 +59,7 @@
 %==== INICIO PAQUETES ====
 %=========================
 
-\RequirePackage[normalem]{ulem} % Para configurar simple control de cambios
+\RequirePackage[markup=underlined]{changes} % Para configurar control de cambios
 
 \RequirePackage{color}
 \RequirePackage[perpage]{footmisc}
@@ -83,10 +83,10 @@
 \RequirePackage{titletoc}
 \RequirePackage[colorlinks,
             citecolor=blue,
-            urlcolor=magenta,
-            linkcolor=red,
-            citebordercolor={0 0 1},
-            urlbordercolor={0 1 1},
+            urlcolor=cyan,
+            linkcolor=blue,
+            citebordercolor=blue,
+            urlbordercolor=cyan,
             linktocpage,
             hyperfootnotes=true
             ]{hyperref} %[colorlinks]
@@ -98,6 +98,25 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
 \RequirePackage[nottoc]{tocbibind}
 
 \DeclareFontShape{OT1}{cmr}{bx}{sc}{<-> cmbcsc10}{} % Magia por error con 0T1 --> http://tex.stackexchange.com/questions/37618/a-problem-with-textsc
+
+%% Control de cambios
+	\definecolor{bluetex}{rgb}{0.01, 0.28, 1.0}
+	\definecolor{redtex}{rgb}{0.82, 0.1, 0.26}
+	\definecolor{greentex}{rgb}{0.0, 0.5, 0.0}
+	
+	%%% Alternative definition to have the remarks
+	%%% in the margins instead of footnotes
+	\RequirePackage{todonotes}
+	\setlength{\marginparwidth}{2.5cm}
+%	\makeatletter
+	\setremarkmarkup{\todo[color=Changes@Color#1!20,size=\scriptsize]{#1: #2}}
+%	\makeatother
+	
+	%% Rather hacky definition of a plain remark/note
+	%% by riding on \added
+	\newcommand{\note}[2][]{\added[#1,remark={#2}]{}}
+%%
+
 
 %======================
 %==== FIN PAQUETES ====
