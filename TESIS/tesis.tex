@@ -10,13 +10,13 @@ nogroupskip,                                         %quita los espacios entre d
 nopostdot, 											 %quita el punto final en los acrónimos         .                           
 ]{glossaries}
 
-\hypersetup{ colorlinks = true } % false para imprimir, true para ver.
+\hypersetup{ colorlinks = true } % Hipervínculos: escribir "false" para imprimir o "true" para ver en digital.
 
-% Ver los documentos de estilos bibliográficos para editar estas siguientes 2 líneas.
+% Ver los documentos de estilos bibliográficos para editar estas siguientes 2 líneas. Se deben de copiar a partir de los PDF de estilos bibliográficos y no es necesario que el estudiante las edite.
 \usepackage{natbib} % Para algunos estilos bibliográficos
 \bibliographystyle{estilos_bibliograficos/natbib/apalike}
 
-\loadglossary
+\loadglossary % No comentar esta línea
 
 % A su vez, la clase udelar.cls ya tiene los siguientes paquetes cargados automáticamente, que podrían ser de interés saber para el usuario:
 % 
@@ -24,8 +24,10 @@ nopostdot, 											 %quita el punto final en los acrónimos         .
 % {setspace},{tabularx},{eqparbox},{ltxcmds},{titletoc},{xcolor},{lineno},{xwatermark}
 
 % Si se quieren agregar más paquetes, se recomienda colocarlos a partir de esta linea y antes de \begin{document}.
+% ===========  INICIO PAQUETES ===============
 
 
+% ===========   FIN PAQUETES   ===============
 
 % Definición de correctores, con un máximo de tres correctores.
 \definechangesauthor[color=redtex]{JLM}			% Siglas del primer corrector 
@@ -55,7 +57,7 @@ nopostdot, 											 %quita el punto final en los acrónimos         .
   \examiner{Prof.}{Nombre del 2do Examinador}{Apellido}{Ph.D.}
   \examiner{Prof.}{Nombre del 3er Examinador}{Apellido}{D.Sc.}
   \examiner{Prof.}{Nombre del 4to Examinador}{Apellido}{Ph.D.}
-  \examiner{Prof.}{Nombre del 5to Examinador}{Apellido}{Ph.D.}
+  \examiner{Prof.}{Nombre del 5to Examinador}{Apellido}{Ph.D.} % Comentar los que no son necesarios.
   %
   \graduatename{Ingeniería Estructural}
   \institute{Facultad de Ingeniería}{FIng}  % La primer institución es la principal.
@@ -65,14 +67,14 @@ nopostdot, 											 %quita el punto final en los acrónimos         .
   \thirduniversity{Universidad YYYYY} % Se agrega el nombre de otra universidad. Comentar esta linea si no es necesaria.
   \graduatelocation{Montevideo}{Uruguay}
   %
-  \date{10}{06}{2017} % Fecha del documento.
-  %
+  \date{10}{06}{2017} % Fecha del documento: día/mes/año
+  % Palabras claves en español
   \keyword{1ra palabra clave}
   \keyword{2da palabra clave}
   \keyword{3ra palabra clave}
   \keyword{4ta palabra clave}
-  \keyword{5ta~palabra clave}
-  %
+  \keyword{5ta palabra clave}
+  % Palabras claves en inglés
   \foreignkeyword{1st keyword}
   \foreignkeyword{2nd keyword}
   \foreignkeyword{3rd keyword}
@@ -95,33 +97,36 @@ nopostdot, 											 %quita el punto final en los acrónimos         .
   %\listadenotaciones 	     % Lista de notaciones
   \listadesiglas 		     % Lista de siglas
   %
-  \tableofcontents           % Tabla de contenidos
+  \tableofcontents           % Tabla de contenidos. Compilar dos veces para ver los cambios completos.
   %
   \mainmatter % Comando que genera las listas y capítulos. NO COMENTAR
   %
+  % Se incluyen los capítulos. Se pueden comentar los capítlos en los cuales no se está trabajando, para que el documento de trabajo sea más pequeño y compile más rápido.
   \include{capitulos/chap01} % Se carga el capítulo 01
   \include{capitulos/chap02} % Se carga el capítulo 02
   \include{capitulos/chap03} % Se carga el capítulo 03
   \include{capitulos/chap04} % Se carga el capítulo 04
   \include{capitulos/chap05} % Se carga el capítulo 05
-  %Seguir copiando la linea de arriba para agregar más capítulos.
+ % Seguir copiando la linea de arriba para agregar más capítulos.
   
   \backmatter % Comando que generalos apéndices, anexos y bibliografía. NO COMENTAR
   
   \bibliography{bibliografia/biblio_1,bibliografia/biblio_2} % Agregar la cantidad de archivos .bib que se tengan para la bibliografía.
-  \bibend
+  \bibend % No comentar
   % 
-  \glosario 		         % Glosario
+  \glosario 		         % Glosario, NO comentar
   %
   \apenarabicnumbering
-  \apenmatter
+  \apenmatter				 % Apéndices, NO comentar
   \input{apendice/apendice_A}
   \input{apendice/apendice_B}
   \input{apendice/apendice_C}
+  % Seguir copiando la linea de arriba para agregar más apéndices.
   %
   \anexarabicnumbering
-  \anexmatter
+  \anexmatter				 % Anexos, NO comentar
   \input{anexo/anexo_A}
+  % Seguir copiando la linea de arriba para agregar más anexos.
   % 
 \end{document}
 
