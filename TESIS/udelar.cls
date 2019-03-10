@@ -59,8 +59,6 @@
 %==== INICIO PAQUETES ====
 %=========================
 
-\RequirePackage[markup=underlined]{changes} % Para configurar control de cambios
-
 \RequirePackage{color}
 \RequirePackage[perpage]{footmisc}
 
@@ -85,8 +83,6 @@
             citecolor=blue,
             urlcolor=cyan,
             linkcolor=blue,
-            citebordercolor=blue,
-            urlbordercolor=cyan,
             linktocpage,
             hyperfootnotes=true
             ]{hyperref} %[colorlinks]
@@ -99,24 +95,27 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
 
 \DeclareFontShape{OT1}{cmr}{bx}{sc}{<-> cmbcsc10}{} % Magia por error con 0T1 --> http://tex.stackexchange.com/questions/37618/a-problem-with-textsc
 
-%% Control de cambios
-	\definecolor{bluetex}{rgb}{0.01, 0.28, 1.0}
-	\definecolor{redtex}{rgb}{0.82, 0.1, 0.26}
-	\definecolor{greentex}{rgb}{0.0, 0.5, 0.0}
-	
-	%%% Alternative definition to have the remarks
-	%%% in the margins instead of footnotes
-	\RequirePackage{todonotes}
-	\setlength{\marginparwidth}{2.5cm}
-%	\makeatletter
-	\setremarkmarkup{\todo[color=Changes@Color#1!20,size=\scriptsize]{#1: #2}}
-%	\makeatother
-	
-	%% Rather hacky definition of a plain remark/note
-	%% by riding on \added
-	\newcommand{\note}[2][]{\added[#1,remark={#2}]{}}
-%%
 
+%% Control de cambios
+	\definecolor{redfill}{RGB}{255, 160, 160}
+	\definecolor{redborder}{RGB}{160, 33, 33}
+	\definecolor{greenfill}{RGB}{200, 240, 200}
+	\definecolor{greenborder}{RGB}{36, 162, 36}
+	
+%% To Do Notes Package
+	\RequirePackage[spanish,
+					colorinlistoftodos,
+					size=footnotesize,
+					figwidth=8cm,
+					color=greenfill,
+					bordercolor=greenborder,
+					linecolor=greenborder
+					]{todonotes}
+	% Para que el ancho de la nota ocupe el margen realmente
+	\setlength{\marginparwidth}{2.5cm}
+
+	% Se define comando para revisor
+	\newcommand{\revisor}[1]{\todo[color=redfill,bordercolor=redborder,linecolor=redborder]{#1}}	
 
 %======================
 %==== FIN PAQUETES ====
