@@ -49,8 +49,8 @@
 %%   Right brace   \}     Tilde         \~}
 %%
 \def\filename{udelar.dtx}
-\def\fileversion{v2.3.2}
-\def\filedate{2015/10/10}
+\def\fileversion{v2.3.3}
+\def\filedate{2019/05/27}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{udelar}[\filedate\ \fileversion\ Fing Dissertations and Thesis]
 \LoadClass[12pt,a4paper]{book}
@@ -116,6 +116,9 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
 
 	% Se define comando para revisor
 	\newcommand{\revisor}[1]{\todo[color=redfill,bordercolor=redborder,linecolor=redborder]{#1}}	
+
+% Para tener los subsubsection numerados también
+\setcounter{secnumdepth}{4}
 
 %======================
 %==== FIN PAQUETES ====
