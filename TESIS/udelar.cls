@@ -417,7 +417,7 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
   \pagenumbering{roman}
   \pagestyle{empty}
   \setcounter{page}{1}
-  \hspace{-0.5cm} \includegraphics[height=0.08\textheight]{imagenes/logo_udelar} \hfill
+  
   \ifnum\@institutelogo>0
 	  \ifnum\@instituteslogos>2
 		  \includegraphics[height=0.08\textheight]{imagenes/logo_institucion1}  \hfil
@@ -436,6 +436,8 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
 		  \fi
       \fi
   \fi	
+  \hfill
+  \hspace{-0.5cm} \includegraphics[height=0.08\textheight]{imagenes/logo_udelar} 
 	  \vspace{1.05cm}
 	  \begin{center}
 	      \vspace*{3cm}
@@ -494,7 +496,7 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
 \newcommand\makefrontpage{%
 \cleardoublepage
 \pagestyle{empty}
-  \hspace{-0.5cm} \includegraphics[height=0.08\textheight]{imagenes/logo_udelar} \hfill
+ 
   \ifnum\@institutelogo>0
 	  \ifnum\@instituteslogos>2
 		  \includegraphics[height=0.08\textheight]{imagenes/logo_institucion1}  \hfil
@@ -513,6 +515,8 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
 		  \fi
 	  \fi
   \fi
+  \hfill
+  \hspace{-0.5cm} \includegraphics[height=0.08\textheight]{imagenes/logo_udelar}
 \vspace{1.05cm}
 \begin{center}
      \doublespacing
