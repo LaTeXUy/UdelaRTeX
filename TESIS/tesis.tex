@@ -14,7 +14,7 @@ nopostdot, 											 %quita el punto final en los acrónimos         .
 
 % Ver los documentos de estilos bibliográficos para editar estas siguientes 2 líneas. Se deben de copiar a partir de los PDF de estilos bibliográficos y no es necesario que el estudiante las edite.
 \usepackage{natbib} % Para algunos estilos bibliográficos
-\bibliographystyle{estilos_bibliograficos/natbib/apalike}
+\bibliographystyle{estilos_bibliograficos/natbib/apalike-es}
 
 \loadglossary % No comentar esta línea
 
@@ -39,7 +39,7 @@ nopostdot, 											 %quita el punto final en los acrónimos         .
   %
   \title{Título de la tesis}
   \subtitle{Subtítulo de la tesis}
-  \institutelogo{3} % Carga cantidad de logos seleccionados, con máximo de 3 logos.
+  \institutelogo{3} % Carga cantidad de logos seleccionados, con máximo de 3 logos. Si se pone un logo horizontal, colocar 1 o 2 logos para no desconfigurar la portada.
   \author{Nombres del autor}{Apellidos}
   \escritura{en} % Se indica que el programa de Posgrado sea "en" o "de" tal área.
   %
@@ -88,10 +88,10 @@ nopostdot, 											 %quita el punto final en los acrónimos         .
   \include{resumen/resumen}
   \include{resumen/abstract}
   %
-%  \listoffigures	         % Lista de figuras
+  \listoffigures	         % Lista de figuras
 %  \listoftables	         % Lista de tablas
   \listadesimbolos 		     % Lista de símbolos
-  %\listadenotaciones 	     % Lista de notaciones
+  \listadenotaciones 	     % Lista de notaciones
   \listadesiglas 		     % Lista de siglas
   %
   \tableofcontents           % Tabla de contenidos. Compilar dos veces para ver los cambios completos.
@@ -123,6 +123,7 @@ nopostdot, 											 %quita el punto final en los acrónimos         .
   \anexarabicnumbering
   \anexmatter				 % Anexos, NO comentar
 %  \input{anexo/anexo_A}
+%  \input{anexo/anexo_B}
   % Seguir copiando la linea de arriba para agregar más anexos.
   % 
 \end{document}
