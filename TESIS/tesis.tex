@@ -1,34 +1,33 @@
 % ===== INICIO DEL PREÁMBULO =====
 %
-\documentclass[msc,oneside,a4paper]{udelar} % Poner msc para Maestría, dsc para Doctorado.
+\documentclass[msc,oneside]{udelar} % Poner msc para Maestría, dsc para Doctorado.
 %
 \usepackage[
-acronyms, 											 %utiliza el glosario de acronimos.
-nohypertypes={acronym,notacion,simbolos,glosario},   %quita los links en el texto al glosario.
-%nonumberlist,                                       %quita los links en los glosarios al texto.
-nogroupskip,                                         %quita los espacios entre diferentes grupos dentro de un glosario.
-nopostdot, 											 %quita el punto final en los acrónimos         .                           
+acronyms, 											 % Utiliza el glosario de acronimos.
+nohypertypes={acronym,notacion,simbolos,glosario},   % Quita los links en el texto al glosario.
+%nonumberlist,                                       % Quita los links en los glosarios al texto.
+nogroupskip,                                         % Quita los espacios entre diferentes grupos dentro de un glosario.
+nopostdot 											 % Quita el punto final en los acrónimos.
 ]{glossaries}
 
 \hypersetup{ colorlinks = true } % Hipervínculos: escribir "false" para imprimir o "true" para ver en digital.
 
-% Ver los documentos de estilos bibliográficos para editar estas siguientes 2 líneas. Se deben de copiar a partir de los PDF de estilos bibliográficos y no es necesario que el estudiante las edite.
-\usepackage{natbib} % Para algunos estilos bibliográficos
-\bibliographystyle{estilos_bibliograficos/natbib/apalike-es}
+% Cargar estilo bibliográfico copiando del documento "Estilos bibliográficos UdelaRTeX.pdf"
+\usepackage[backend=biber,style=apa,sortcites,natbib=true]{biblatex}
+\usepackage{estilos_bibliograficos/udelartex_apa}
+
+\addbibresource{bibliografia/biblio_1.bib} % Agregar la cantidad de archivos .bib que se tengan para la bibliografía.
+\addbibresource{bibliografia/biblio_2.bib} % Se coloca una línea por archivo .bib.
 
 \loadglossary % No comentar esta línea
 
 % A su vez, la clase udelar.cls ya tiene los siguientes paquetes cargados automáticamente, que podrían ser de interés saber para el usuario:
-% 
-% {color},{hyphenat},{appendix},{lastpage},{babel},{inputenc},{amsmath,amssymb},{ifthen},{graphicx},{caption}
-% {setspace},{tabularx},{eqparbox},{ltxcmds},{titletoc},{xcolor},{lineno},{xwatermark}
+%{color},{hyphenat},{appendix},{lastpage},{babel},{inputenc},{amsmath,amssymb},{ifthen},{graphicx},{caption}{setspace},{tabularx},{eqparbox},{ltxcmds},{titletoc},{xcolor},{lineno},{xwatermark}
 
 % Si se quieren agregar más paquetes, se recomienda colocarlos a partir de esta linea y antes de \begin{document}.
 % ===========  INICIO PAQUETES ===============
 
-
 % ===========   FIN PAQUETES   ===============
-
 
 
 % =====  FIN DEL PREÁMBULO  =====
@@ -88,36 +87,38 @@ nopostdot, 											 %quita el punto final en los acrónimos         .
   \include{resumen/resumen}
   \include{resumen/abstract}
   %
-  \listoffigures	         % Lista de figuras
+%  \listoffigures	         % Lista de figuras
 %  \listoftables	         % Lista de tablas
-  \listadesimbolos 		     % Lista de símbolos
+  \listadesimbolos 		 % Lista de símbolos
   \listadenotaciones 	     % Lista de notaciones
   \listadesiglas 		     % Lista de siglas
   %
   \tableofcontents           % Tabla de contenidos. Compilar dos veces para ver los cambios completos.
   %
   \mainmatter % Comando que genera las listas y capítulos. NO COMENTAR
-  %
+  % 
   % Se incluyen los capítulos. Se pueden comentar los capítlos en los cuales no se está trabajando, para que el documento de trabajo sea más pequeño y compile más rápido.
-  \include{capitulos/chap01} % Se carga el capítulo 01
-  \include{capitulos/chap02} % Se carga el capítulo 02
-  \include{capitulos/chap03} % Se carga el capítulo 03
-  \include{capitulos/chap04} % Se carga el capítulo 04
-  \include{capitulos/chap05} % Se carga el capítulo 05
- % Seguir copiando la linea de arriba para agregar más capítulos.
+  \include{capitulos/chap01}	% Se carga el capítulo 01
+  \include{capitulos/chap02}	% Se carga el capítulo 02
+  \include{capitulos/chap03}	% Se carga el capítulo 03
+  \include{capitulos/chap04} 	% Se carga el capítulo 04
+  \include{capitulos/chap05} 	% Se carga el capítulo 05
+
+  % Seguir copiando la linea de arriba para agregar más capítulos.
   
   \backmatter % Comando que generalos apéndices, anexos y bibliografía. NO COMENTAR
   
-  \bibliography{bibliografia/biblio_1,bibliografia/biblio_2} % Agregar la cantidad de archivos .bib que se tengan para la bibliografía.
-  \bibend % No comentar
+
+  \printbibliography[heading=bibintoc]		% Se imprimen las referencias bibliográficas
+  \bibend % NO comentar
   % 
   \glosario 		         % Glosario, NO comentar
   %
   \apenarabicnumbering
   \apenmatter				 % Apéndices, NO comentar
-  \input{apendice/apendice_A}
-  \input{apendice/apendice_B}
-  \input{apendice/apendice_C}
+%  \input{apendice/apendice_A}
+%  \input{apendice/apendice_B}
+%  \input{apendice/apendice_C}
   % Seguir copiando la linea de arriba para agregar más apéndices.
   %
   \anexarabicnumbering

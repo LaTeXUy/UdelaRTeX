@@ -49,8 +49,8 @@
 %%   Right brace   \}     Tilde         \~}
 %%
 \def\filename{udelar.dtx}
-\def\fileversion{v2.3.3}
-\def\filedate{2019/05/27}
+\def\fileversion{v2.4.0}
+\def\filedate{2020/05/17}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{udelar}[\filedate\ \fileversion\ Fing Dissertations and Thesis]
 \LoadClass[12pt,a4paper]{book}
@@ -61,12 +61,10 @@
 
 \RequirePackage{color}
 \RequirePackage[perpage]{footmisc}
-
-
 \RequirePackage{hyphenat}
 \RequirePackage[toc]{appendix}
 \RequirePackage{lastpage}
-\RequirePackage[english,spanish,es-nodecimaldot]{babel}
+\RequirePackage[english,spanish,mexico,es-nodecimaldot]{babel}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{amsmath,amssymb}
 \RequirePackage{ifthen}
@@ -89,9 +87,10 @@
 \RequirePackage[a4paper,bindingoffset=0.0cm,vcentering=true,%
 top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los margins
 \RequirePackage[pagewise]{lineno}
-\RequirePackage[printwatermark]{xwatermark}
 \RequirePackage{xcolor}
 \RequirePackage[nottoc]{tocbibind}
+%\RequirePackage[printwatermark]{xwatermark}
+
 
 \DeclareFontShape{OT1}{cmr}{bx}{sc}{<-> cmbcsc10}{} % Magia por error con 0T1 --> http://tex.stackexchange.com/questions/37618/a-problem-with-textsc
 
@@ -117,12 +116,12 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
 	% Se define comando para revisor
 	\newcommand{\revisor}[1]{\todo[color=redfill,bordercolor=redborder,linecolor=redborder]{#1}}	
 
-% Para tener los subsubsection numerados también
-\setcounter{secnumdepth}{4}
-
 %======================
 %==== FIN PAQUETES ====
 %======================
+
+% Para tener los subsubsection numerados también.
+\setcounter{secnumdepth}{4}
 
 \DeclareOption{oneside}{
 \setboolean{@twoside}{false}}
@@ -131,13 +130,22 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
 \setboolean{@twoside}{true}}
 
 \newboolean{linenumbers}
-\newboolean{watermark}
 
 \DeclareOption{linenumbers}{
 \setboolean{linenumbers}{true}}
 
-\DeclareOption{watermark}{
-\setboolean{watermark}{true}}
+% Para cargar la marca de agua "En revisión" en todas las hojas. El paquete xwatermark causaba un conflicto con el paquete BibLaTeX.
+\newif\ifdraftmode  % Define the `\ifdraftmode` conditional
+\draftmodefalse     % Set it to false --> not the draft mode
+
+\DeclareOption{watermark}{\draftmodetrue\setlength\overfullrule{5pt}} % set draft mode to true if specified
+\ProcessOptions*  % Reprocess options
+
+\ifdraftmode                   % Check for draftmode
+	\usepackage{background}        % Within the check, because the package automatically sets a pink coloured 'Draft' in the background
+	\backgroundsetup{contents=En revisión,color=gray!50} 
+\fi
+
 
 %================================
 %==== INICIO NUEVOS COMANDOS ====
@@ -153,16 +161,9 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
 \newcommand{\revision}[1]{{\color{blue}{}#1}} % Para escribir texto nuevo de la revisión.
 \newcommand{\eliminar}[1]{{\color{red}\sout{#1}}} % Para marcar como eliminado el texto actual.
 
-%%==== APACITE ====
-%\renewcommand{\BOthers}[1]{et al.\hbox{}}
-%\renewcommand{\BBAA}{\&}% Letra que va entre los autores en las referencias
-%\renewcommand{\BBAB}{and}% Entre autores en el texto
-%%=================
-
 %==== Comando UdelaRTeX ====
 \def \UdelaRTeX {{\rm U{\hbox{dela}}\rm R\kern-.05em}\kern-.08em T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 %===========================
-
 
 %==== Tolerancias ====
 \tolerance=10000 % Pueden ser modificadas
@@ -410,9 +411,11 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
 
 %=========================
 
+%\newwatermark[allpages,color=gray!50,angle=35,scale=3,xpos=0,ypos=0]{En revisión
+
 %==== Página I ====
 \renewcommand\maketitle{%
-  \ifthenelse{\boolean{watermark}}{\newwatermark[allpages,color=gray!50,angle=35,scale=3,xpos=0,ypos=0]{En revisión}}{}
+%  \ifthenelse{\boolean{watermark}}{\backgroundsetup{contents=En revisión,color=gray!50}}{}
   \begin{titlepage}
   \pagenumbering{roman}
   \pagestyle{empty}
@@ -630,10 +633,6 @@ UdelarExaminerSurname:\the\count1 \endcsname\\\\ \ \ \ %
       \pageref{LastPage}
       p.\@ifundefined{r@cat:lofflag}{}{\pageref{cat:lofflag}} $29,7$cm.
       \par
-      % There is an issue here. When the last entry must be split between lines,
-      % the spacing between it and the next paragraph becomes smaller.
-      % Should we manually introduce a fixed space? But how could we know that
-      % a name was split? Is this happening yet?
 %      Director de tesis:\par
 %	  \nohyphens{\@directorname\ \@directorsurn}\par
 	  %
