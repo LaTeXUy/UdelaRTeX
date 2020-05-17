@@ -1,5 +1,5 @@
 ### Versión
-2.3.4
+2.4.0
 
 Para descargar el ZIP con los archivos de la tesis, hacer click en el botón con la flecha hacia abajo y luego en "Download zip".
 
@@ -8,3 +8,4 @@ Para descargar el ZIP con los archivos de la tesis, hacer click en el botón con
 - [Manual de Instalación](http://tesis.posgrados.udelar.edu.uy/TallerTesis/UdelaRTeX/blob/master/README/Manual_Instalacion_v1.4.pdf)
 - [Manual de Usuario](http://tesis.posgrados.udelar.edu.uy/TallerTesis/UdelaRTeX/blob/master/README/UdelaRTeX v2.4.pdf)
 - [Taller Asesoría para la Redacción de la Tesis](http://www.posgrados.udelar.edu.uy/cursos.php)
+- [Comunidad de usuarios de LaTeX, LaTeXuy](https://sites.google.com/view/latexuy)
