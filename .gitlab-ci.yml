@@ -1,0 +1,9 @@
+
+compile_pdf:
+  image: tianon/latex
+  script:
+    - ./descrgaDepsYCompilar.sh
+  artifacts:
+    paths:
+      - latex/libroResMat2.pdf
+
