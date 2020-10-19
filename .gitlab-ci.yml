@@ -1,9 +1,8 @@
-
 compile_pdf:
   image: tianon/latex
   script:
-    - ./descrgaDepsYCompilar.sh
+    - cd TESIS && pdflatex tesis.tex && cd ..
   artifacts:
     paths:
-      - latex/libroResMat2.pdf
+      - TESIS/tesis.pdf
 
