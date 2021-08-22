@@ -21,14 +21,9 @@ nopostdot 											 % Quita el punto final en los acrónimos.
 
 \loadglossary % No comentar esta línea
 
-% A su vez, la clase udelar.cls ya tiene los siguientes paquetes cargados automáticamente, que podrían ser de interés saber para el usuario:
-%{color},{hyphenat},{appendix},{lastpage},{babel},{inputenc},{amsmath,amssymb},{ifthen},{graphicx},{caption}{setspace},{tabularx},{eqparbox},{ltxcmds},{titletoc},{xcolor},{lineno},{xwatermark}
-
-% Si se quieren agregar más paquetes, se recomienda colocarlos a partir de esta linea y antes de \begin{document}.
 % ===========  INICIO PAQUETES ===============
-
+% Si se quieren agregar más paquetes, se recomienda colocarlos en esta zona.
 % ===========   FIN PAQUETES   ===============
-
 
 % =====  FIN DEL PREÁMBULO  =====
 
@@ -76,6 +71,8 @@ nopostdot 											 % Quita el punto final en los acrónimos.
   \foreignkeyword{3rd keyword}
   \foreignkeyword{4th keyword}
   \foreignkeyword{5th keyword}
+  %     
+  \footnoteperpage % Comando que numera notas al pie por página.
   %     
   \maketitle  % Comando que genera el título de la tesis.
   %
