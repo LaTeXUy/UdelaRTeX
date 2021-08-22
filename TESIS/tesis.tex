@@ -1,6 +1,5 @@
 % ===== INICIO DEL PREÁMBULO =====
-%
-\documentclass[msc,oneside]{udelar} % Poner msc para Maestría, dsc para Doctorado.
+\documentclass[msc,oneside]{udelar} % Poner msc para Maestría, dsc para Doctorado, "english" para inglés, "draft" para compilar sin figuras. Ver ReadMe por más información.
 %
 \usepackage[
 acronyms, 											 % Utiliza el glosario de acronimos.
@@ -15,9 +14,10 @@ nopostdot 											 % Quita el punto final en los acrónimos.
 % Cargar estilo bibliográfico copiando del documento "Estilos bibliográficos UdelaRTeX.pdf"
 \usepackage[backend=biber,style=apa,sortcites,natbib=true]{biblatex}
 \usepackage{estilos_bibliograficos/udelartex_apa}
+% Verificar de tener bien configurada la secuencia de compilación: pdflatex - biber - pdflatex - pdflatex. Ver guía "Biblografia_en_LaTeX" por más información.
 
 \addbibresource{bibliografia/biblio_1.bib} % Agregar la cantidad de archivos .bib que se tengan para la bibliografía.
-\addbibresource{bibliografia/biblio_2.bib} % Se coloca una línea por archivo .bib.
+\addbibresource{bibliografia/biblio_2.bib} % Se coloca un comando por archivo .bib a cargar.
 
 \loadglossary % No comentar esta línea
 
@@ -30,12 +30,13 @@ nopostdot 											 % Quita el punto final en los acrónimos.
 % ===== INICIO DEL DOCUMENTO =====
 
 \begin{document}
+%  \selectlanguage{english} % Comentar esta linea para ESPAÑOL - No comentar para ENGLISH
   %
   \title{Título de la tesis}
   \subtitle{Subtítulo de la tesis}
   \institutelogo{3} % Carga cantidad de logos seleccionados, con máximo de 3 logos. Si se pone un logo horizontal, colocar 1 o 2 logos para no desconfigurar la portada.
   \author{Nombres del autor}{Apellidos}
-  \escritura{en} % Se indica que el programa de Posgrado sea "en" o "de" tal área.
+  \escritura{en} % Se indica que el programa de Posgrado sea "en" o "de" tal área. "in" en inglés.
   %
   \director{Prof.}{Nombre del Director de Tesis}{Apellido}{D.Sc.}
   \director{Prof.}{Nombre del Director de Tesis}{Apellido}{D.Sc.} % Comentar esta línea si se tiene solo un director de tesis.
@@ -48,9 +49,9 @@ nopostdot 											 % Quita el punto final en los acrónimos.
   \examiner{Prof.}{Nombre del 2do Examinador}{Apellido}{Ph.D.}
   \examiner{Prof.}{Nombre del 3er Examinador}{Apellido}{D.Sc.}
   \examiner{Prof.}{Nombre del 4to Examinador}{Apellido}{Ph.D.}
-  \examiner{Prof.}{Nombre del 5to Examinador}{Apellido}{Ph.D.} % Comentar los que no son necesarios.
+  \examiner{Prof.}{Nombre del 5to Examinador}{Apellido}{Ph.D.} % Comentar los que no son necesarios. 
   %
-  \graduatename{Ingeniería Estructural}
+  \graduatename{Ingeniería Estructural}		% Nombre del grado
   \institute{Facultad de Ingeniería}{FIng}  % La primer institución es la principal.
   \institute{Facultad de Medicina}{FMed}  % Agregar copias de esta línea para agregar instituciones.
   \institute{Facultad de Agronomía}{FAgro}  % Agregar copias de esta línea para agregar instituciones. No se discrimina de que universidad es tal facultad.
@@ -58,7 +59,7 @@ nopostdot 											 % Quita el punto final en los acrónimos.
   \thirduniversity{Universidad YYYYY} % Se agrega el nombre de otra universidad. Comentar esta linea si no es necesaria.
   \graduatelocation{Montevideo}{Uruguay}
   %
-  \date{10}{06}{2017} % Fecha del documento: día/mes/año
+  \date{10}{06}{2017} % Fecha del documento: día/mes/año. Hay que llenar los 3 campos.
   % Palabras claves en español
   \keyword{1ra palabra clave}
   \keyword{2da palabra clave}
@@ -73,19 +74,19 @@ nopostdot 											 % Quita el punto final en los acrónimos.
   \foreignkeyword{5th keyword}
   %     
   \footnoteperpage % Comando que numera notas al pie por página.
-  %     
+  %
   \maketitle  % Comando que genera el título de la tesis.
   %
   \frontmatter  % Comando que genera la portadilla, el catalogo y el tribunal de evaluación. NO COMENTAR
   %
-  \include{ded_agr_epi/dedicacion}
-  \include{ded_agr_epi/agradecimientos}
-  \include{ded_agr_epi/epigrafe}
-  \include{resumen/resumen}
-  \include{resumen/abstract}
+%  \include{ded_agr_epi/dedicacion}
+%  \include{ded_agr_epi/agradecimientos}
+%  \include{ded_agr_epi/epigrafe}
+%  \include{resumen/resumen}
+%  \include{resumen/abstract}
   %
-%  \listoffigures	         % Lista de figuras
-%  \listoftables	         % Lista de tablas
+  \listoffigures	         % Lista de figuras
+  \listoftables	       	 % Lista de tablas
   \listadesimbolos 		 % Lista de símbolos
   \listadenotaciones 	     % Lista de notaciones
   \listadesiglas 		     % Lista de siglas
@@ -96,32 +97,33 @@ nopostdot 											 % Quita el punto final en los acrónimos.
   % 
   % Se incluyen los capítulos. Se pueden comentar los capítlos en los cuales no se está trabajando, para que el documento de trabajo sea más pequeño y compile más rápido.
   \include{capitulos/chap01}	% Se carga el capítulo 01
-  \include{capitulos/chap02}	% Se carga el capítulo 02
-  \include{capitulos/chap03}	% Se carga el capítulo 03
-  \include{capitulos/chap04} 	% Se carga el capítulo 04
-  \include{capitulos/chap05} 	% Se carga el capítulo 05
+%  \include{capitulos/chap02}	% Se carga el capítulo 02
+%  \include{capitulos/chap03}	% Se carga el capítulo 03
+%  \include{capitulos/chap04} 	% Se carga el capítulo 04
+%  \include{capitulos/chap05} 	% Se carga el capítulo 05
 
   % Seguir copiando la linea de arriba para agregar más capítulos.
   
   \backmatter % Comando que generalos apéndices, anexos y bibliografía. NO COMENTAR
   
 
-  \printbibliography[heading=bibintoc]		% Se imprimen las referencias bibliográficas
+  \printbibliography[heading=bibintoc,title={Referencias bibliográficas}]		% Se imprimen las referencias bibliográficas
   \bibend % NO comentar
   % 
   \glosario 		         % Glosario, NO comentar
   %
   \apenarabicnumbering
   \apenmatter				 % Apéndices, NO comentar
-%  \input{apendice/apendice_A}
-%  \input{apendice/apendice_B}
+  
+  \input{apendice/apendice_A}
+  \input{apendice/apendice_B}
 %  \input{apendice/apendice_C}
   % Seguir copiando la linea de arriba para agregar más apéndices.
   %
   \anexarabicnumbering
   \anexmatter				 % Anexos, NO comentar
-%  \input{anexo/anexo_A}
-%  \input{anexo/anexo_B}
+  \input{anexo/anexo_A}
+  \input{anexo/anexo_B}
   % Seguir copiando la linea de arriba para agregar más anexos.
   % 
 \end{document}

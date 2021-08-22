@@ -12,7 +12,7 @@
 %% at the Universidad de la República (UdelaR).
 %% 
 %% Copyright (C) 2015 Pablo Castrillo Green   URL http://www.fing.edu.uy/~pabloc/
-%% Copyright (C) 2015-2021 Mihdí Anthony Caballero Baher   URL http://www.fing.edu.uy/~mcaballero/
+%% Copyright (C) 2015-2017 Mihdí Anthony Caballero Baher   URL http://www.fing.edu.uy/~mcaballero/
 %% 
 %% This program is free software; you can redistribute it and/or modify
 %% it under the terms of the GNU General Public License version 3 as
@@ -159,7 +159,6 @@ top=4cm,bottom=3cm,left=4.0cm,right=3.0cm]{geometry} %showframe para ver los mar
 \addto\captionsspanish{\renewcommand{\listtablename}{Lista de tablas}}
 \addto\captionsspanish{\renewcommand{\listfigurename}{Lista de figuras}}
 \addto\captionsspanish{\renewcommand{\contentsname}{Tabla de contenidos}}
-\addto\captionsspanish{\renewcommand{\bibname}{Referencias bibliográficas}}
 
 % Comandos para control de cambios
 \newcommand{\revision}[1]{{\color{blue}{}#1}} % Para escribir texto nuevo de la revisión.
