@@ -12,7 +12,7 @@
 %% at the Universidad de la República (UdelaR).
 %% 
 %% Copyright (C) 2015 Pablo Castrillo Green   URL http://www.fing.edu.uy/~pabloc/
-%% Copyright (C) 2015-2017 Mihdí Anthony Caballero Baher   URL http://www.fing.edu.uy/~mcaballero/
+%% Copyright (C) 2015-2021 Mihdí Anthony Caballero Baher   URL http://www.fing.edu.uy/~mcaballero/
 %% 
 %% This program is free software; you can redistribute it and/or modify
 %% it under the terms of the GNU General Public License version 3 as
