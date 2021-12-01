@@ -1,5 +1,6 @@
-### Repositorio no oficial de UdelaRTeX
-### Versión
+# Repositorio NO OFICIAL de clase de LaTeX para tesis de posgrado de UdelaR
+
+## Versión
 2.4.2
 
 Para descargar el ZIP con los archivos de la tesis, hacer click en el botón verde que dice "Code" y luego en "Download zip".
