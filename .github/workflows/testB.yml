@@ -1,20 +1,12 @@
-on:
-  push:
-    branches:
-    - main
-    - release/*
-  pull_request:
-    branches:
-    - main
-
+name: Build LaTeX document
+on: [push]
 jobs:
-  compilaTeX:
-    name: deploy to staging
+  build_latex:
     runs-on: ubuntu-latest
-      - name: Github Action for LaTeX
-      # You may pin to the exact commit or the version.
-      # uses: xu-cheng/latex-action@97bae119d017e25bfb37ce8e5d95b1d64135f00b
-      uses: xu-cheng/latex-action@v2
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
         with:
-          # The root LaTeX file to be compiled
-          root_file: testAction.tex 
+          root_file: testAction.tex
