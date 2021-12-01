@@ -8,7 +8,7 @@ on:
     - main
 
 jobs:
-  my_job:
+  compilaTeX:
     name: deploy to staging
     runs-on: ubuntu-latest
       - name: Github Action for LaTeX
