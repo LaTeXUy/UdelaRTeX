@@ -1,8 +1,0 @@
-compile_pdf:
-  image: tianon/latex
-  script:
-    - cd TESIS && pdflatex tesis.tex && cd ..
-  artifacts:
-    paths:
-      - TESIS/tesis.pdf
-
