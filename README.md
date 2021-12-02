@@ -1,13 +1,13 @@
 # Repositorio NO OFICIAL de clase de LaTeX para tesis de posgrado de UdelaR
 
 ## Objetivo
-El objetivo  inicial de esta clase era tener un template de latex que permita facilitar el trabajo de escritura de la tesis a las y los estudiantes de posgrado de UdelaR.
+El objetivo  inicial de esta clase era tener un template de latex que permita facilitar el trabajo de escritura de la tesis de cada estudiante de posgrado de UdelaR.
 
 ## Advertencia
 Por el momento, esta clase de LaTeX no es Oficial, es decir que no tiene implementados estilos aprobados por la UdelaR.
 
 ## Autores y origen
-Como versión inicial en el desarrollo de esta clase, se tomó el estilo CoppeTeX del programa de posgrado en Ingeniería de la UFRJ en brasil. Desde 2011 se desarrollo la modificación de ese estilo por parte de pablo castrillo @pablocgp y Mihdí Caballero @mihdicaballero
+Como versión inicial en el desarrollo de esta clase, se tomó el estilo CoppeTeX del programa de posgrado en Ingeniería de la UFRJ en brasil. Desde 2011 se desarrollo la modificación de ese estilo por parte de Pablo Castrillo @pablocgp y Mihdí Caballero @mihdicaballero
 
 
 ## Versión
