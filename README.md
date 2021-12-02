@@ -1,4 +1,5 @@
 # Repositorio NO OFICIAL de clase de LaTeX para tesis de posgrado de UdelaR
+Universidad de la República de Uruguay
 
 ## Objetivo
 El objetivo  inicial de esta clase era tener un template de latex que permita facilitar el trabajo de escritura de la tesis de cada estudiante de posgrado de UdelaR.
