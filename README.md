@@ -16,7 +16,7 @@ Como versión inicial en el desarrollo de esta clase, se tomó el estilo CoppeTe
 
 Para descargar el ZIP con los archivos de la tesis, hacer click en el botón verde que dice "Code" y luego en "Download zip".
 
-Esta versión también está [disponible como plantilla de Overleaf](https://www.overleaf.com/latex/templates/udelartex-2-dot-5-0/zymynhnnvdzj), un editor de LaTeX on line. [Aquí](https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template) se explica cómo crear un proyecto a partir de una planitlla, y se puede leer la documentación completa [acá](https://www.overleaf.com/learn).
+Esta versión también está [disponible como plantilla de Overleaf](https://www.overleaf.com/latex/templates/udelartex-2-dot-5-0/zymynhnnvdzj), un editor de LaTeX online. [Aquí](https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template) se explica cómo crear un proyecto a partir de una plantilla, y se puede leer la documentación completa [acá](https://www.overleaf.com/learn).
 
 ### Más Información
 - [Manual de Instalación](https://github.com/LaTeXUy/UdelaRTeX/blob/master/README/Manual_Instalacion_v1.4.pdf)
