@@ -1,24 +1,3 @@
-# Repositorio NO OFICIAL de clase de LaTeX para tesis de posgrado de UdelaR
-Universidad de la República de Uruguay
+# Repositorio para creación de issues de ls clase de LaTeX para tesis de posgrado de UdelaR
 
-## Objetivo
-El objetivo  inicial de esta clase era tener un template de latex que permita facilitar el trabajo de escritura de la tesis de cada estudiante de posgrado de UdelaR.
-
-## Advertencia
-Por el momento, esta clase de LaTeX no es Oficial, es decir que no tiene implementados estilos aprobados por la UdelaR.
-
-## Autores y origen
-Como versión inicial en el desarrollo de esta clase, se tomó el estilo CoppeTeX del programa de posgrado en Ingeniería de la UFRJ en brasil. Desde 2011 se desarrollo la modificación de ese estilo por parte de Pablo Castrillo @pablocgp y Mihdí Caballero @mihdicaballero
-
-
-## Versión
-2.5.0
-
-Para descargar el ZIP con los archivos de la tesis, hacer click en el botón verde que dice "Code" y luego en "Download zip".
-
-Esta versión también está [disponible como plantilla de Overleaf](https://www.overleaf.com/latex/templates/udelartex-2-dot-5-0/zymynhnnvdzj), un editor de LaTeX online. [Aquí](https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template) se explica cómo crear un proyecto a partir de una plantilla, y se puede leer la documentación completa [acá](https://www.overleaf.com/learn).
-
-### Más Información
-- [Manual de Instalación](https://github.com/LaTeXUy/UdelaRTeX/blob/master/README/Manual_Instalacion_v1.4.pdf)
-- [Comunidad de usuarios de LaTeX, LaTeXuy](https://sites.google.com/view/latexuy)
-- [Guía de recomendación de estilo UdelaR 2016](https://git.posgrados.udelar.edu.uy/TallerTesis/UdelaRTeX/blob/master/README/Gu%C3%ADa%20para%20presentaci%C3%B3n%20de%20una%20tesis%20de%20posgrado_ago%202016.pdf)
+En este repo se propone tener contenidos/discusiones/archivos que sean complementarios a lo disponible en https://git.interior.edu.uy/posgrados/UdelaRTeX
